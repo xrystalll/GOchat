@@ -9,10 +9,10 @@ var user = [];
 
 (function($) {
 	$.sanitize = function(input) {
-		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, 'хуй').
-					 replace(/<[\/\!]*?[^<>]*?>/gi, '').
-					 replace(/<style[^>]*?>.*?<\/style>/gi, '').
-					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '');
+		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '#@$!*6').
+					 replace(/<[\/\!]*?[^<>]*?>/gi, '&!2%=_^').
+					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
+					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^');
 	    return output;
 	};
 })(jQuery);
