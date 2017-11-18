@@ -65,6 +65,10 @@ li span {
   font-weight: 700;
 }
 
+li img.emoji {
+  display: table;
+}
+
 input.message {
   width: 100%;
   position: fixed;
