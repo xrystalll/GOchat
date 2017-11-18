@@ -83,6 +83,7 @@ input.message {
   font-family: 'Material Icons';
   color: #3F51B5;
   font-size: 24px;
+  cursor: pointer;
 }
 
 .initModal {
