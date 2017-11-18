@@ -7,16 +7,28 @@ var usernameInput = $('input.username');
 
 var user = [];
 
+(function($) {
+	$.sanitize = function(input) {
+		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '').
+					 replace(/<[\/\!]*?[^<>]*?>/gi, '').
+					 replace(/<style[^>]*?>.*?<\/style>/gi, '').
+					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '');
+	    return output;
+	};
+})(jQuery);
+
+
 usernameInput.on('keyup', function(e) {
 	if (e.keyCode === 13 && usernameInput.val().length > 0) {
 		var getTxt = usernameInput.val();
 		user.push(getTxt);
 		usernameInput.val('');
-		$('.init').css('display', 'none');
-		$('.message').css('display', 'block');
+		$('.initModal').css('display', 'none');
 		console.log(user);
 	}
 });
+
+
 
 input.on('keyup', function(e) {
 	var curUsername = user.join();
@@ -31,14 +43,6 @@ input.on('keyup', function(e) {
 });
 
 messages.limitToLast(100).on("child_added", function(snap) {
-	wrap.append('<li id="margin"><span>' + snap.val().name + '</span> ' + snap.val().text + '</li>');
+	wrap.append('<li><span>' + $.sanitize(snap.val().user) + ':</span> ' + $.sanitize(snap.val().message) + '</li>');
 	window.scrollTo(0,document.body.scrollHeight);
-});
-
-$(document).ready(function(){
-
-	$(".nav_main").click(function () {
-		$(".drawer").toggle();
-	});
-
 });
