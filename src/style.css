@@ -61,7 +61,7 @@ li {
 }
 
 li span {
-  color: #e74c3c;
+  color: #3F51B5;
   font-weight: 700;
 }
 
@@ -76,7 +76,7 @@ input.message {
   padding: 0 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .initModal {
