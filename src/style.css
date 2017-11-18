@@ -79,6 +79,11 @@ input.message {
           transform: translateX(-50%);
 }
 
+.send {
+  content: 'send';
+  font-family: "Material Icons";
+}
+
 .initModal {
   width: 100%;
   height: 100%;
