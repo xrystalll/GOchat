@@ -12,6 +12,7 @@ var user = [];
 		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '').
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '').
 					 replace(/<style[^>]*?>.*?<\/style>/gi, '').
+					 replace(/[img].*?[\/img]/gi, 'qw').
 					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '');
 	    return output;
 	};
