@@ -55,9 +55,9 @@ li {
   color: #34495e;
   word-break: break-word;
   background: #fff;
-  margin: 8px 0;
+  margin: 6px 0;
   display: table;
-  border-radius: 12px;
+  border-radius: 3px;
 }
 
 li span {
