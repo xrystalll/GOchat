@@ -107,7 +107,8 @@ input.message {
 }
 
 .initModal input.username {
-  width: 350px;
+  max-width: 350px;
+  width: calc(100% - 16px);
   height: 60px;
   background-color: #eee;
   padding: 0 15px;
