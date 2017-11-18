@@ -132,6 +132,7 @@ input.message {
   width: calc(100% - 24px);
   height: 60px;
   background-color: #eee;
+  border-radius: 2px;
   padding: 0 15px;
   margin-top: 25px;
   color: #444;
