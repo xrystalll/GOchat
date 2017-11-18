@@ -79,15 +79,16 @@ input.message {
 }
 
 .send {
-    font-family: 'Material Icons';
-    color: #3F51B5;
-    font-size: 24px;
-    cursor: pointer;
-    position: fixed;
-    left: calc(100% - 60px);
-    height: 60px;
-    width: 60px;
-    bottom: 0;
+  font-family: 'Material Icons';
+  color: #3F51B5;
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  left: calc(100% - 60px);
+  height: 60px;
+  width: 60px;
+  bottom: 0;
+  background: #fff;
 }
 
 .initModal {
