@@ -42,7 +42,7 @@ li {
 }
 
 .wrapper {
-  width: 100%;
+  width: calc(100% - 16px);
   max-width: 650px;
   margin: 0 auto;
   padding-bottom: 70px;
