@@ -20,7 +20,8 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #eee;
-  font-family: 'Roboto';
+  font-size: 16px;
+  font-family: sans-serif;
 }
 
 li {
@@ -40,6 +41,7 @@ li {
     opacity: 1;
   }
 }
+
 .wrapper {
   width: 100%;
   max-width: 650px;
@@ -52,16 +54,22 @@ li {
 li {
   padding: 10px 20px;
   color: #34495e;
-  word-break: break-all;
+  word-break: break-word;
+  background: #fff;
+  margin: 8px 0;
+  display: table;
+  border-radius: 12px;
 }
+
 li span {
   color: #e74c3c;
   font-weight: 700;
 }
 
 input.message {
+  display: none;
   width: 100%;
-  max-width: 650px;
+  max-width: 720px;
   position: fixed;
   bottom: 0;
   height: 60px;
@@ -70,7 +78,7 @@ input.message {
   padding: 0 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .initModal {
@@ -94,10 +102,12 @@ input.message {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 .initModal h3 {
   font-weight: 300;
   color: #777;
 }
+
 .initModal input.username {
   width: 350px;
   height: 60px;
