@@ -9,10 +9,9 @@ var user = [];
 
 (function($) {
 	$.sanitize = function(input) {
-		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '').
+		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, 'хуй').
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '').
 					 replace(/<style[^>]*?>.*?<\/style>/gi, '').
-					 replace(/[img].*?[\/img]/gi, '<img src="*?">').
 					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '');
 	    return output;
 	};
