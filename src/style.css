@@ -67,7 +67,6 @@ li span {
 
 input.message {
   width: 100%;
-  max-width: 720px;
   position: fixed;
   bottom: 0;
   height: 60px;
@@ -85,7 +84,7 @@ input.message {
     font-size: 24px;
     cursor: pointer;
     position: fixed;
-    left: 72.3%;
+    left: calc(100% - 60px);
     height: 60px;
     width: 60px;
     bottom: 0;
