@@ -101,6 +101,15 @@ input.message {
           flex-direction: column;
 }
 
+.initModal .appname {
+    color: #424242;
+    font-size: 36px;
+    margin: 24px;
+}
+
+.initModal .appname i {
+  font-size: 24px !important:
+}
 .initModal h3 {
   font-weight: 300;
   color: #777;
