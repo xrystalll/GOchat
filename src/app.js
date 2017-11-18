@@ -1,4 +1,4 @@
-var fb = new Firebase("https://lark-8e158.firebaseio.com/uchat");
+var fb = new Firebase("https://gochat-ac889.firebaseio.com/");
 var messages = fb.child("messages");
 var btn = $('button');
 var wrap = $('.wrapper');
