@@ -80,10 +80,15 @@ input.message {
 }
 
 .send {
-  font-family: 'Material Icons';
-  color: #3F51B5;
-  font-size: 24px;
-  cursor: pointer;
+    font-family: 'Material Icons';
+    color: #3F51B5;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    left: 72.3%;
+    height: 60px;
+    width: 60px;
+    bottom: 0;
 }
 
 .initModal {
