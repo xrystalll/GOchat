@@ -12,8 +12,16 @@ var user = [];
 		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '#@$!*6').
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '&!2%=_^').
 					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
-					 replace(/#001/gi, '<i class="material-icons">send</i>').
-					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^');
+					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^').
+					 replace(/#001/gi, '<img class="emoji" src="">').
+					 replace(/#002/gi, '<img class="emoji" src="">').
+					 replace(/#003/gi, '<img class="emoji" src="">').
+					 replace(/#004/gi, '<img class="emoji" src="">').
+					 replace(/#005/gi, '<img class="emoji" src="">').
+					 replace(/#006/gi, '<img class="emoji" src="">').
+					 replace(/#007/gi, '<img class="emoji" src="">').
+					 replace(/#008/gi, '<img class="emoji" src="">').
+					 replace(/#009/gi, '<img class="emoji" src="">');
 	    return output;
 	};
 })(jQuery);
