@@ -104,7 +104,7 @@ input.message {
 .initModal .appname {
     color: #424242;
     font-size: 36px;
-    margin: 24px;
+    margin: 24px 24px 100px 24px;
 }
 
 .initModal .appname i {
@@ -116,8 +116,8 @@ input.message {
 }
 
 .initModal input.username {
-  max-width: 350px;
-  width: calc(100% - 16px);
+  max-width: 400px;
+  width: calc(100% - 24px);
   height: 60px;
   background-color: #eee;
   padding: 0 15px;
