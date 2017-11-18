@@ -146,3 +146,40 @@ input.message:focus {
   margin: 25px 0;
   color: #444;
 }
+
+.initModal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.initModal h3 {
+  font-weight: 300;
+  color: #777;
+}
+.initModal input.username {
+  width: 350px;
+  height: 60px;
+  background-color: #eee;
+  padding: 0 15px;
+  margin-top: 25px;
+  color: #444;
+}
+.initModal input.username:focus {
+  outline: none;
+}
