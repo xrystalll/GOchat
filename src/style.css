@@ -43,7 +43,7 @@ li {
 
 .wrapper {
   width: calc(100% - 16px);
-  max-width: 650px;
+  max-width: 720px;
   margin: 0 auto;
   padding-bottom: 70px;
   overflow-x: hidden;
