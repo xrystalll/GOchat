@@ -30,17 +30,18 @@ usernameInput.on('keyup', function(e) {
 
 
 
-input.on('keyup', function(e) {
-	var curUsername = user.join();
-	if (e.keyCode === 13 && input.val().length > 0) {
-		var getTxt = input.val();
-		messages.push({
-			user: curUsername,
-			message: getTxt
-		});
-		input.val('');
-	}
-});
+var submit = document.getElementById('send');
+submit.onclick = function () {
+    var curUsername = user.join();
+    if (input.val().length > 0) {
+        var getTxt = input.val();
+        messages.push({
+            user: curUsername,
+            message: getTxt
+        });
+    input.val('');
+    }
+}
 
 messages.limitToLast(100).on("child_added", function(snap) {
 	wrap.append('<li><span>' + $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
