@@ -12,6 +12,7 @@ var user = [];
 		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '#@$!*6').
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '&!2%=_^').
 					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
+					 replace(/#001/gi, '<i class="material-icons">send</i>').
 					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^');
 	    return output;
 	};
