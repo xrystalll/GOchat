@@ -5,7 +5,7 @@ var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
 
-var user = [xrystalll];
+var user = [];
 
 (function($) {
 	$.sanitize = function(input) {
