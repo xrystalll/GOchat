@@ -5,7 +5,7 @@ var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
 
-var user = [];
+var user = [xrystalll];
 
 (function($) {
 	$.sanitize = function(input) {
@@ -35,7 +35,7 @@ usernameInput.on('keyup', function(e) {
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
 		console.log(user);
-		document.cookie = "user=curUsername; path=/";
+		document.cookie = "user='user'; path=/";
 	}
 });
 
