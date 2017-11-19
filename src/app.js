@@ -39,18 +39,23 @@ usernameInput.on('keyup', function(e) {
 });
 
 
-
 var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
-            user: curUsername,
-            message: getTxt
-        });
+        	user: curUsername,
+        	message: getTxt
+	});
+    if (e.keyCode === 13 && input.val().length > 0) {
+	var getTxt = input.val();
+	messages.push({
+		user: curUsername,
+		message: getTxt
+	});
     input.val('');
-    }
+    }}
 }
 
 messages.limitToLast(100).on("child_added", function(snap) {
