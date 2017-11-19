@@ -116,8 +116,9 @@ input.message {
 
 .emoji_b-alert.vis {
     display: block;
+    background: #fff;
     position: fixed;
-    bottom: 0;
+    bottom: 60px;
     left: 0;
     right: 0;
     box-sizing: border-box;
