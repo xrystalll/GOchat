@@ -60,3 +60,22 @@ messages.limitToLast(100).on("child_added", function(snap) {
 function emoji_alert() {
    document.getElementById("emoji_b").classList.toggle("vis");
 }
+
+function x () {return;}
+function FocusText() {
+    document.ebt.emoji_c.focus();
+    document.ebt.emoji_c.select();
+    return true;
+}
+function DoSmilie(addSmilie) {
+    var revisedmsgage;
+    var currentmsgage = document.ebt.emoji_c.value;
+    revisedmsgage = currentmsgage+addSmilie;
+    document.ebt.emoji_c.value=revisedmsgage;
+    document.ebt.emoji_c.focus();
+    return;
+}
+function DoPrompt(action) {
+	var revisedmsgage;
+	var currentmsgage = document.ebt.qmsgage.value;
+}
