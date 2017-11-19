@@ -34,7 +34,7 @@ usernameInput.on('keyup', function(e) {
 		user.push(getTxt);
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
-		console.log(user);
+		set_cookie ( 'username', 'user' );
 	}
 });
 
