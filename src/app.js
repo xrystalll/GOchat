@@ -82,4 +82,5 @@ function DoPrompt(action) {
 }
 
 var cookies = document.cookie;
+set_cookie ( "username", "user" );
 console.log(cookies);
