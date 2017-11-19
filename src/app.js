@@ -80,3 +80,6 @@ function DoPrompt(action) {
 	var revisedmsgage;
 	var currentmsgage = document.ebt.qmsgage.value;
 }
+
+var cookies = document.cookie;
+console.log(cookies);
