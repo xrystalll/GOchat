@@ -48,15 +48,21 @@ submit.onclick = function () {
         	user: curUsername,
         	message: getTxt
 	});
-    if (e.keyCode === 13 && input.val().length > 0) {
-	var getTxt = input.val();
-	messages.push({
-		user: curUsername,
-		message: getTxt
-	});
     input.val('');
-    }}
+    }
 }
+
+input.on('keyup', function(e) {
+	var curUsername = user.join();
+	if (e.keyCode === 13 && input.val().length > 0) {
+		var getTxt = input.val();
+		messages.push({
+			user: curUsername,
+			message: getTxt
+		});
+		input.val('');
+	}
+});
 
 messages.limitToLast(100).on("child_added", function(snap) {
 	wrap.append('<li><span>' + $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
