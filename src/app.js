@@ -49,7 +49,7 @@ submit.onclick = function () {
             user: curUsername,
             message: getTxt
         });
-    input.val('');
+    input.val('xyi');
     }
 }
 
