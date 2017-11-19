@@ -13,15 +13,15 @@ var user = [];
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '&!2%=_^').
 					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
 					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^').
-					 replace(/#001/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/001.jpg">').
-					 replace(/#002/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/002.jpg">').
-					 replace(/#003/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/003.jpg">').
-					 replace(/#004/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/004.jpg">').
-					 replace(/#005/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/005.jpg">').
-					 replace(/#006/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/006.jpg">').
-					 replace(/#007/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/007.jpg">').
-					 replace(/#008/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/008.jpg">').
-					 replace(/#009/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/010.jpg">');
+					 replace(/#a01/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/001.jpg">').
+					 replace(/#a02/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/002.jpg">').
+					 replace(/#a03/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/003.jpg">').
+					 replace(/#a04/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/004.jpg">').
+					 replace(/#a05/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/005.jpg">').
+					 replace(/#a06/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/006.jpg">').
+					 replace(/#a07/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/007.jpg">').
+					 replace(/#a08/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/008.jpg">').
+					 replace(/#a09/gi, '<img class="emoji" src="http://v9116084.bget.ru/design/emoji/010.jpg">');
 	    return output;
 	};
 })(jQuery);
