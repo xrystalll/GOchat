@@ -35,7 +35,7 @@ usernameInput.on('keyup', function(e) {
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
 		console.log(user);
-		document.cookie = "user=user; path=/";
+		document.cookie = "user=curUsername; path=/";
 	}
 });
 
