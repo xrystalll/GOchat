@@ -87,7 +87,6 @@ input.message {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 2;
 }
 
 .send {
@@ -101,7 +100,6 @@ input.message {
   width: 48px;
   bottom: 0;
   background: #fff;
-  z-index: 3;
 }
 
 .emoji_b {
@@ -115,7 +113,6 @@ input.message {
   width: 32px;
   bottom: 0;
   background: #fff;
-  z-index: 3;
 }
 
 .emoji_a {
@@ -124,7 +121,6 @@ input.message {
 }
 
 .emoji_b-alert.vis {
-    transform: translateY(calc(100% + -52px));
     display: block;
     background: #fff;
     position: fixed;
@@ -143,7 +139,7 @@ input.message {
 }
 
 .emoji_b-alert {
-    transform: translateY(112px);
+    display: none;
 }
 
 .emoji_b-alert-body {
