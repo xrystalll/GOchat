@@ -42,12 +42,13 @@ li {
 }
 
 .wrapper {
-  width: calc(100% - 16px);
   max-width: 720px;
   margin: 0 auto;
   padding-bottom: 70px;
   overflow-x: hidden;
   word-break: break-all;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 li {
@@ -55,7 +56,7 @@ li {
   color: #34495e;
   word-break: break-word;
   background: #fff;
-  margin: 6px 0;
+  margin: 6px 8px;
   display: table;
   border-radius: 3px;
 }
