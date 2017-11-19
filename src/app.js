@@ -80,3 +80,30 @@ function DoPrompt(action) {
 	var revisedmsgage;
 	var currentmsgage = document.ebt.qmsgage.value;
 }
+
+
+
+function check_vicit_id() {
+
+    if (!getCookie(VISIT_ID_COOKIE)) {
+        var date = new Date;
+        date.setTime(date.getTime()+(5*1000));
+        visit_id = rand(1111111, 9999999)+"."+date.getTime(); // генерируем уникальный visit_id посетителя
+        document.cookie = ""+ VISIT_ID_COOKIE + "="+ visit_id +";expires="+ date.toGMTString() + "; path='/'";
+        console.log( 'ID VISIT: ' + visit_id);
+    } else {
+        var date = new Date;
+        date.setTime(date.getTime()+(60*1000));
+        visit_id = getCookie(VISIT_ID_COOKIE);
+        document.cookie = ""+ VISIT_ID_COOKIE + "="+ visit_id +";expires="+ date.toGMTString() + "; path='/'";
+        console.log( 'ID VISIT: ' + visit_id);
+    }
+
+}
+function check_vicit() {
+
+    setInterval(function() {
+        check_vicit_id ();
+    }, 1000);
+
+}   
