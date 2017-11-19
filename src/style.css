@@ -75,7 +75,8 @@ li img.emoji {
 }
 
 li img.sticker {
-  width: 148px;
+  max-width: 148px;
+  width: 100%;
   float: right;
   margin-left: 6px;
 }
