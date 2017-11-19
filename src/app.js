@@ -75,19 +75,19 @@ function emoji_alert() {
 
 function x () {return;}
 function FocusText() {
-    document.ebt.emoji_c.focus();
-    document.ebt.emoji_c.select();
+    document.getElementById('emoji_c').focus();
+    document.getElementById('emoji_c').select();
     return true;
 }
 function DoSmilie(addSmilie) {
     var revisedmsgage;
-    var currentmsgage = document.ebt.emoji_c.value;
+    var currentmsgage = document.getElementById('emoji_c').value;
     revisedmsgage = currentmsgage+addSmilie;
-    document.ebt.emoji_c.value=revisedmsgage;
-    document.ebt.emoji_c.focus();
+    document.getElementById('emoji_c').value=revisedmsgage;
+    document.getElementById('emoji_c').focus();
     return;
 }
 function DoPrompt(action) {
 	var revisedmsgage;
-	var currentmsgage = document.ebt.qmsgage.value;
+	var currentmsgage = document.getElementById('emoji_c').value;
 }
