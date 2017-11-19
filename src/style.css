@@ -70,6 +70,11 @@ li img.emoji {
   margin-left: 4px;
 }
 
+li img.sticker {
+  width: 148px;
+  float: right;
+}
+
 input.message {
   width: 100%;
   position: fixed;
