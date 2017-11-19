@@ -56,3 +56,7 @@ messages.limitToLast(100).on("child_added", function(snap) {
 	wrap.append('<li><span>' + $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
+
+function emoji_alert() {
+   document.getElementById("emoji_b").classList.toggle("vis");
+}
