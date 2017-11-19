@@ -89,9 +89,9 @@ input.message {
   font-size: 24px;
   cursor: pointer;
   position: fixed;
-  left: calc(100% - 60px);
+  left: calc(100% - 48px);
   height: 60px;
-  width: 60px;
+  width: 48px;
   bottom: 0;
   background: #fff;
 }
