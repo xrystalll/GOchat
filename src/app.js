@@ -38,8 +38,6 @@ usernameInput.on('keyup', function(e) {
 	}
 });
 
-		document.cookie = "user=' + $.sanitize(snap.val().user) + '; path=/";
-
 var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
