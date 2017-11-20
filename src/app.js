@@ -35,10 +35,10 @@ usernameInput.on('keyup', function(e) {
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
 		console.log(user);
-		document.cookie = "user=' + $.sanitize(snap.val().user) + '; path=/";
 	}
 });
 
+		document.cookie = "user=' + $.sanitize(snap.val().user) + '; path=/";
 
 var submit = document.getElementById('send');
 submit.onclick = function () {
