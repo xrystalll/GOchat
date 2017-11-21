@@ -70,7 +70,7 @@ li span {
 }
 
 li img.emoji {
-  width: 14px;
+  width: 16px;
   margin-left: 4px;
 }
 
@@ -121,7 +121,7 @@ input.message {
 }
 
 .emoji_a {
-    width: 16px;
+    width: 17px;
     margin-left: 6px;
 }
 
