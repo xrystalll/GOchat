@@ -13,15 +13,15 @@ var user = [];
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '&!2%=_^').
 					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
 					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^').
-					 replace(/#a01/gi, '<img class="emoji" src="src/img/a01.jpg">').
-					 replace(/#a02/gi, '<img class="emoji" src="src/img/a02.jpg">').
-					 replace(/#a03/gi, '<img class="emoji" src="src/img/a03.jpg">').
-					 replace(/#a04/gi, '<img class="emoji" src="src/img/a04.jpg">').
-					 replace(/#a05/gi, '<img class="emoji" src="src/img/a05.jpg">').
-					 replace(/#a06/gi, '<img class="emoji" src="src/img/a06.jpg">').
-					 replace(/#a07/gi, '<img class="emoji" src="src/img/a07.jpg">').
-					 replace(/#a08/gi, '<img class="emoji" src="src/img/a08.jpg">').
-					 replace(/#a09/gi, '<img class="emoji" src="src/img/a09.jpg">').
+					 replace(/#a01/gi, '<img class="emoji" src="src/img/a01.png">').
+					 replace(/#a02/gi, '<img class="emoji" src="src/img/a02.png">').
+					 replace(/#a03/gi, '<img class="emoji" src="src/img/a03.png">').
+					 replace(/#a04/gi, '<img class="emoji" src="src/img/a04.png">').
+					 replace(/#a05/gi, '<img class="emoji" src="src/img/a05.png">').
+					 replace(/#a06/gi, '<img class="emoji" src="src/img/a06.png">').
+					 replace(/#a07/gi, '<img class="emoji" src="src/img/a07.png">').
+					 replace(/#a08/gi, '<img class="emoji" src="src/img/a08.png">').
+					 replace(/#a09/gi, '<img class="emoji" src="src/img/a09.png">').
 					 replace(/#z01/gi, '<img class="sticker" src="src/img/z01.png">');
 	    return output;
 	};
