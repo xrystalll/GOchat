@@ -175,6 +175,7 @@ input.message {
     float: left;
     max-width: calc(100% - 104px);
     height: 52px;
+    display: none;
 }
 
 .sticker_b-alert-question {
@@ -188,6 +189,11 @@ input.message {
     display: inline-block;
     float: left;
     max-width: calc(100% - 104px);
+    display: none;
+}
+
+.es_togg.vis {
+    display: initial;
 }
 
 .emoji_b-alert-option-body {
