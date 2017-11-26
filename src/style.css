@@ -242,11 +242,11 @@ input.message {
     background-color: rgba(153, 153, 153, .2);
 }
 
-.emoji_b-alert-question::-webkit-scrollbar {
-    width: 3px;
+.es-board::-webkit-scrollbar {
+    width: 2px;
 }
 
-.emoji_b-alert-question::-webkit-scrollbar-thumb {
+.es-board::-webkit-scrollbar-thumb {
     background: rgba(125, 125, 125, .5);
 }
 
