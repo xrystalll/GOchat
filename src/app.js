@@ -96,3 +96,7 @@ function DoPrompt(action) {
 	var revisedmsgage;
 	var currentmsgage = document.getElementById('emoji_c').value;
 }
+
+function es_toggle() {
+   document.getElementById("es_togg").classList.toggle("vis");
+}
