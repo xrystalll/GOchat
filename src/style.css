@@ -146,7 +146,6 @@ input.message {
     border-top: 1px solid rgba(243, 243, 243, .6);
     z-index: 1;
     opacity: 1;
-    height: 52px;
 }
 
 .emoji_b-alert {
@@ -175,7 +174,6 @@ input.message {
     float: left;
     max-width: calc(100% - 104px);
     height: 52px;
-    display: none;
 }
 
 .sticker_b-alert-question {
@@ -189,10 +187,19 @@ input.message {
     display: inline-block;
     float: left;
     max-width: calc(100% - 104px);
+}
+
+.emoji_b-alert-body.vis .emoji_b-alert-question {
+    display: initial;
+}
+.emoji_b-alert-body.vis .sticker_b-alert-question {
     display: none;
 }
 
-#es_togg.vis {
+.emoji_b-alert-body .emoji_b-alert-question {
+    display: none;
+}
+.emoji_b-alert-body .sticker_b-alert-question {
     display: initial;
 }
 
