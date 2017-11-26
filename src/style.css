@@ -210,7 +210,9 @@ input.message {
     margin-top: 0px;
     border-top-style: none;
     display: table-cell;
-    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .emoji_b-but {
