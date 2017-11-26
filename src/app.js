@@ -100,3 +100,14 @@ function DoPrompt(action) {
 function es_toggle() {
    document.getElementById("es_togg").classList.toggle("vis");
 }
+
+$(document).ready(function() {
+    var menu = $(".menu");
+    var arrow = $(".arrow");
+
+    $(".toggle").on('click', function() {
+      $.each([menu, arrow], function() {
+          this.toggleClass('out');
+      });
+    });
+});
