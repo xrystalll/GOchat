@@ -125,6 +125,12 @@ input.message {
     margin-left: 6px;
 }
 
+.sticker_a {
+    max-width: 76px;
+    height: 76px;
+    margin-left: 6px;
+}
+
 .emoji_b-alert.vis {
     display: block;
     background: #fff;
@@ -169,6 +175,19 @@ input.message {
     float: left;
     max-width: calc(100% - 104px);
     height: 52px;
+}
+
+.sticker_b-alert-question {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 18px;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 104px);
 }
 
 .emoji_b-alert-option-body {
