@@ -22,7 +22,13 @@ var user = [];
 					 replace(/#a07/gi, '<img class="emoji" src="src/img/a07.png">').
 					 replace(/#a08/gi, '<img class="emoji" src="src/img/a08.png">').
 					 replace(/#a09/gi, '<img class="emoji" src="src/img/a09.png">').
-					 replace(/#z01/gi, '<img class="sticker" src="src/img/z01.png">');
+					 replace(/#z01/gi, '<img class="sticker" src="src/img/z01.png">').
+					 replace(/#z02/gi, '<img class="sticker" src="src/img/z02.png">').
+					 replace(/#z03/gi, '<img class="sticker" src="src/img/z03.png">').
+					 replace(/#z04/gi, '<img class="sticker" src="src/img/z04.png">').
+					 replace(/#z05/gi, '<img class="sticker" src="src/img/z05.png">').
+					 replace(/#z06/gi, '<img class="sticker" src="src/img/z06.png">').
+					 replace(/#z07/gi, '<img class="sticker" src="src/img/z07.png">');
 	    return output;
 	};
 })(jQuery);
