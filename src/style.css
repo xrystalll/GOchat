@@ -203,7 +203,7 @@ input.message {
 .emoji_b-alert-option-body {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    padding: 3px 6px;
+    padding: 3px 8px;
     margin-top: 0px;
     border-top-style: none;
     display: table-cell;
