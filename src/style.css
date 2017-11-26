@@ -192,7 +192,7 @@ input.message {
     display: none;
 }
 
-.es_togg.vis {
+#es_togg.vis {
     display: initial;
 }
 
