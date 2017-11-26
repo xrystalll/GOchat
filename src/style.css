@@ -215,6 +215,28 @@ input.message {
     bottom: 0;
 }
 
+.arrow,
+.menu {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.5s ease;
+          transition: opacity 0.4s ease, -webkit-transform 0.5s ease;
+          transition: opacity 0.4s ease, transform 0.5s ease;
+          transition: opacity 0.4s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.arrow.out,
+.menu.out {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.5s ease;
+          transition: opacity 0.4s ease, -webkit-transform 0.5s ease;
+          transition: opacity 0.4s ease, transform 0.5s ease;
+          transition: opacity 0.4s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
 .emoji_b-but {
     border: 10px;
     box-sizing: border-box;
