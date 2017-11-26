@@ -167,7 +167,7 @@ input.message {
     color: rgba(0, 0, 0, 0.6);
     padding: 18px;
     box-sizing: border-box;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     display: inline-block;
@@ -181,7 +181,7 @@ input.message {
     color: rgba(0, 0, 0, 0.6);
     padding: 18px;
     box-sizing: border-box;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     display: inline-block;
