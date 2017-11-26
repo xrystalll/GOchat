@@ -122,7 +122,7 @@ input.message {
 
 .emoji_a {
     width: 17px;
-    margin-left: 6px;
+    margin-left: 8px;
 }
 
 .sticker_a {
@@ -163,9 +163,8 @@ input.message {
 }
 
 .emoji_b-alert-question {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.6);
-    padding: 18px;
+    font-size: 0;
+    padding: 17px;
     box-sizing: border-box;
     overflow-x: auto;
     overflow-y: hidden;
@@ -173,13 +172,11 @@ input.message {
     display: inline-block;
     float: left;
     max-width: calc(100% - 52px);
-    height: 52px;
 }
 
 .sticker_b-alert-question {
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.6);
-    padding: 18px;
+    padding: 17px;
     box-sizing: border-box;
     overflow-x: auto;
     overflow-y: hidden;
