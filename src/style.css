@@ -172,7 +172,7 @@ input.message {
     white-space: nowrap;
     display: inline-block;
     float: left;
-    max-width: calc(100% - 104px);
+    max-width: calc(100% - 52px);
     height: 52px;
 }
 
@@ -186,7 +186,7 @@ input.message {
     white-space: nowrap;
     display: inline-block;
     float: left;
-    max-width: calc(100% - 104px);
+    max-width: calc(100% - 52px);
 }
 
 .emoji_b-alert-body.vis .emoji_b-alert-question {
@@ -227,10 +227,10 @@ input.message {
     font-weight: inherit;
     transform: translate3d(0px, 0px, 0px);
     height: 36px;
-    line-height: 36px;
-    min-width: 88px;
+    line-height: 0;
+    min-width: 36px;
     color: #5d80a6;
-    border-radius: 2px;
+    border-radius: 50%;
     position: relative;
     overflow: hidden;
     text-align: center;
