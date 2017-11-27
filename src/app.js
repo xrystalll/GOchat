@@ -77,7 +77,10 @@ input.on('keyup', function(e) {
 });
 
 messages.limitToLast(100).on("child_added", function(snap) {
-	wrap.append('<li><time>' + $.sanitize(snap.val().time) + '</time> <span>' + $.sanitize(snap.val().user) + '</span>, ' + $.sanitize(snap.val().message) + '</li>');
+	wrap.append('<div>
+		    	<span>' + $.sanitize(snap.val().user) + '</span> <time>' + $.sanitize(snap.val().time) + '</time>
+		    	<div>' + $.sanitize(snap.val().message) + '</div>
+		    </div>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
