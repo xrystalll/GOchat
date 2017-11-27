@@ -100,7 +100,7 @@ html, body {
   font-size: 0 !important;
 }
 
-.cover:first-letters {
+.cover:first-letter {
   font-size: 16px !important;
 }
 
