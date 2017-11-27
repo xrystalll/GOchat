@@ -83,14 +83,18 @@ html, body {
 }
 
 .cover {
-    width: 42px;
-    height: 42px;
-    background: #3F51B5;
-    border-radius: 50%;
-    display: table-cell;
-    position: absolute;
-    left: 8px;
-    margin-top: -8px !important;
+  width: 42px;
+  height: 42px;
+  background: #3F51B5;
+  border-radius: 50%;
+  display: table-cell;
+  position: absolute;
+  left: 8px;
+  margin-top: -8px !important;
+  color: #fff;
+  line-height: 42px;
+  text-align: center;
+  font-size: 16px !important;
 }
 
 .msb img.emoji {
