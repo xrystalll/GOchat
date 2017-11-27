@@ -58,8 +58,7 @@ html, body {
   color: #34495e;
   word-break: break-word;
   background: #fff;
-  margin: 6px 0;
-  margin: 6px 8px;
+  margin: 6px;
   display: table;
   border-radius: 3px;
 }
