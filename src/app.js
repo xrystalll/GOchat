@@ -78,11 +78,7 @@ input.on('keyup', function(e) {
 });
 
 messages.limitToLast(100).on("child_added", function(snap) {
-	wrap.append('<li><span>'
-		    	document.write(checkTime(t.getHours()));
-			document.write(":");
-			document.write(checkTime(t.getMinutes()));
-	+ $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
+	wrap.append('<li>' + checkTime(t.getHours()) + ':' + checkTime(t.getMinutes()) + '<span>' + $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
