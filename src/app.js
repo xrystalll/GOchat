@@ -4,7 +4,7 @@ var btn = $('button');
 var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
-
+var time = new Date();
 var user = [];
 
 (function($) {
@@ -51,7 +51,8 @@ submit.onclick = function () {
         var getTxt = input.val();
         messages.push({
         	user: curUsername,
-        	message: getTxt
+        	message: getTxt,
+		date: time
 	});
     input.val('');
     }
