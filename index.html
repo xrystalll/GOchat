@@ -11,9 +11,9 @@
 
 	<div class="wrapper"></div>
 
-		<input class="message" type="text" id="emoji_c" maxlength="800" placeholder="Введите сообщение">
-		<input class="emoji_b" type="submit" onclick="emoji_alert()" value="mood">
-		<input class="send" type="submit" id="send" value="send">
+	<input class="message" type="text" id="emoji_c" maxlength="800" placeholder="Введите сообщение">
+	<input class="emoji_b" type="submit" onclick="emoji_alert()" value="mood">
+	<input class="send" type="submit" id="send" value="send">
 
 	<div id="emoji_b" class="emoji_b-alert">
 		<div id="es_togg" class="emoji_b-alert-body vis">
@@ -45,7 +45,7 @@
 			<div class="emoji_b-alert-option-body">
 				<button tabindex="0" type="button" class="emoji_b-but">
 					<div>
-						<a  id="toggle" class="toggle emoji_b-but-opt" onclick="es_toggle()">
+						<a id="toggle" class="toggle emoji_b-but-opt" onclick="es_toggle()">
 							<i class="material-icons menu">arrow_forward</i>
 							<i class="material-icons arrow out">arrow_back</i>
 						</a>
@@ -61,7 +61,7 @@
 			GOchat
 		</h1>
 		<h3>Ваше имя?</h3>
-		<input type="text" class="username" onkeyup="var err=/['\s',':', '`', '!', '*']/; if(err.or(this.value)) this.value=''" maxlength="25" placeholder="Введите имя">
+		<input type="text" class="username" onkeyup="var err=/['\s',':','`','!','*']/; if(err.or(this.value)) this.value=''" maxlength="25" placeholder="Введите имя">
 	</div>
 
 	<script src="src/jquery.min.js"></script>
