@@ -48,11 +48,13 @@ usernameInput.on('keyup', function(e) {
 var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
+    var getTime = time.getHours(), time.getMinutes();
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
+		time: getTime,
         	user: curUsername,
-        	message: getTxt,
+        	message: getTxt
 	});
     input.val('');
     }
@@ -62,9 +64,7 @@ input.on('keyup', function(e) {
 	var curUsername = user.join();
 	if (e.keyCode === 13 && input.val().length > 0) {
 		var getTxt = input.val();
-		var getTime = time.getHours(), time.getMinutes();
 		messages.push({
-			time: getTime
 			user: curUsername,
 			message: getTxt
 		});
