@@ -4,15 +4,7 @@ var btn = $('button');
 var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
-function checkTime(i)
-{
-if (i<10) 
-{
-i="0" + i;
-}
-return i;
-}
-var t = new Date();
+
 var user = [];
 
 (function($) {
@@ -58,7 +50,6 @@ submit.onclick = function () {
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
-		t: checkTime,
         	user: curUsername,
         	message: getTxt
 	});
@@ -71,7 +62,6 @@ input.on('keyup', function(e) {
 	if (e.keyCode === 13 && input.val().length > 0) {
 		var getTxt = input.val();
 		messages.push({
-			t: checkTime,
 			user: curUsername,
 			message: getTxt
 		});
@@ -80,7 +70,7 @@ input.on('keyup', function(e) {
 });
 
 messages.limitToLast(100).on("child_added", function(snap) {
-	wrap.append('<li>' + checkTime(t.getHours()) + ':' + checkTime(t.getMinutes()) + ' <span>' + $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
+	wrap.append('<li><span>' + $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
