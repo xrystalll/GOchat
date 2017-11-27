@@ -47,8 +47,8 @@ usernameInput.on('keyup', function(e) {
 var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
-    var h = new Date();
-    var nowTime = h.getHours();
+    var tm = new Date();
+    var nowTime = tm.getHours() + ':' + tm.getMinutes();
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
@@ -57,15 +57,17 @@ submit.onclick = function () {
         	message: getTxt
 	});
     input.val('');
-    console.log(nowTime);
     }
 }
 
 input.on('keyup', function(e) {
 	var curUsername = user.join();
+        var tm = new Date();
+        var nowTime = tm.getHours() + ':' + tm.getMinutes();
 	if (e.keyCode === 13 && input.val().length > 0) {
 		var getTxt = input.val();
 		messages.push({
+		        time: nowTime,
 			user: curUsername,
 			message: getTxt
 		});
