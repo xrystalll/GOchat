@@ -11,7 +11,7 @@
 
 	<div class="wrapper"></div>
 
-		<input class="message" type="text" id="emoji_c" placeholder="Введите сообщение">
+		<input class="message" type="text" id="emoji_c" maxlength="800" placeholder="Введите сообщение">
 		<input class="emoji_b" type="submit" onclick="emoji_alert()" value="mood">
 		<input class="send" type="submit" id="send" value="send">
 
@@ -61,7 +61,7 @@
 			GOchat
 		</h1>
 		<h3>Ваше имя?</h3>
-		<input type="text" class="username" placeholder="Введите имя">
+		<input type="text" class="username" onkeyup="var err=/['\s',':', ',', '`', '!', '*']/; if(err.or(this.value)) this.value=''" maxlength="25" placeholder="Введите имя">
 	</div>
 
 	<script src="src/jquery.min.js"></script>
