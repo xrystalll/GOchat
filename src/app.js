@@ -3,6 +3,7 @@ var messages = fb.child("messages");
 var btn = $('button');
 var wrap = $('.wrapper');
 var input = $('input.message');
+var time = new Date();
 var usernameInput = $('input.username');
 
 var user = [];
@@ -70,7 +71,7 @@ input.on('keyup', function(e) {
 });
 
 messages.limitToLast(100).on("child_added", function(snap) {
-	wrap.append('<li><span>' + $.sanitize(snap.val().user) + '</span>, ' + $.sanitize(snap.val().message) + '</li>');
+	wrap.append('<li>'+ time.getHours() +':'+ time.getMinutes() + '<span>' + $.sanitize(snap.val().user) + '</span>, ' + $.sanitize(snap.val().message) + '</li>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
