@@ -4,6 +4,7 @@ var btn = $('button');
 var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
+function checkTime(i) { if (i<10) { i="0" + i; } return i; }
 
 var user = [];
 
@@ -48,7 +49,7 @@ var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
     var tm = new Date();
-    var nowTime = tm.getHours() + ':' + tm.getMinutes();
+    var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
@@ -63,7 +64,7 @@ submit.onclick = function () {
 input.on('keyup', function(e) {
 	var curUsername = user.join();
         var tm = new Date();
-        var nowTime = tm.getHours() + ':' + tm.getMinutes();
+        var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
 	if (e.keyCode === 13 && input.val().length > 0) {
 		var getTxt = input.val();
 		messages.push({
