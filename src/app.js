@@ -52,7 +52,7 @@ submit.onclick = function () {
         messages.push({
         	user: curUsername,
         	message: getTxt,
-		date = new Date(msg.time),m=date.getMinutes(),m=m<10?'0'+m:m,date=date.getHours()+':'+m,
+		date = new Date(sanitize.time),m=date.getMinutes(),m=m<10?'0'+m:m,date=date.getHours()+':'+m,
 	});
     input.val('');
     }
