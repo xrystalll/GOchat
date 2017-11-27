@@ -97,6 +97,10 @@ html, body {
   color: #fff;
   line-height: 42px;
   text-align: center;
+  font-size: 0 !important;
+}
+
+.cover:first-letters {
   font-size: 16px !important;
 }
 
