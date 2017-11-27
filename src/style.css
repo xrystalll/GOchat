@@ -70,12 +70,14 @@ html, body {
   color: #3F51B5;
   font-weight: 700;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .msb time {
   color: rgba(50, 50, 50, 0.5);
   font-size: 12px;
   margin-left: 8px;
+  white-space: nowrap;
 }
 
 .msb div {
