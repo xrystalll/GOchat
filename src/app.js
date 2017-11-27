@@ -62,7 +62,9 @@ input.on('keyup', function(e) {
 	var curUsername = user.join();
 	if (e.keyCode === 13 && input.val().length > 0) {
 		var getTxt = input.val();
+		var getTime = time.getHours(), time.getMinutes();
 		messages.push({
+			time: getTime
 			user: curUsername,
 			message: getTxt
 		});
@@ -71,7 +73,7 @@ input.on('keyup', function(e) {
 });
 
 messages.limitToLast(100).on("child_added", function(snap) {
-	wrap.append('<li>'+ time.getHours() +':'+ time.getMinutes() + '<span>' + $.sanitize(snap.val().user) + '</span>, ' + $.sanitize(snap.val().message) + '</li>');
+	wrap.append('<li><span>' + $.sanitize(snap.val().user) + '</span>, ' + $.sanitize(snap.val().message) + '</li>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
