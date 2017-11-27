@@ -4,7 +4,6 @@ var btn = $('button');
 var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
-var time = new Date();
 var user = [];
 
 (function($) {
@@ -73,6 +72,19 @@ messages.limitToLast(100).on("child_added", function(snap) {
 	wrap.append('<li><span>' + $.sanitize(snap.val().user) + ', </span> ' + $.sanitize(snap.val().message) + '</li>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
+
+function checkTime(i)
+{
+if (i<10) 
+{
+i="0" + i;
+}
+return i;
+}
+var t = new Date();
+document.write(checkTime(t.getHours()));
+document.write(":");
+document.write(checkTime(t.getMinutes()));
 
 function emoji_alert() {
    document.getElementById("emoji_b").classList.toggle("vis");
