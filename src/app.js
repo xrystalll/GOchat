@@ -3,7 +3,7 @@ var messages = fb.child("messages");
 var btn = $('button');
 var wrap = $('.wrapper');
 var input = $('input.message');
-var time = new Date();
+var tm = new Date();
 var usernameInput = $('input.username');
 
 var user = [];
@@ -48,7 +48,7 @@ usernameInput.on('keyup', function(e) {
 var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
-    var getTime = time.getHours();
+    var getTime = tm.getHours();
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
