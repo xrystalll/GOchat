@@ -12,7 +12,7 @@ i="0" + i;
 }
 return i;
 }
-var time = new Date();
+var t = new Date();
 var user = [];
 
 (function($) {
@@ -58,7 +58,7 @@ submit.onclick = function () {
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
-		time: checkTime,
+		t: checkTime,
         	user: curUsername,
         	message: getTxt
 	});
@@ -71,7 +71,7 @@ input.on('keyup', function(e) {
 	if (e.keyCode === 13 && input.val().length > 0) {
 		var getTxt = input.val();
 		messages.push({
-			time: checkTime,
+			t: checkTime,
 			user: curUsername,
 			message: getTxt
 		});
