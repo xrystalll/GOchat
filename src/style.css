@@ -80,6 +80,17 @@ html, body {
   margin-top: 8px;
 }
 
+.cover {
+    width: 42px;
+    height: 42px;
+    background: #3F51B5;
+    border-radius: 50%;
+    display: table-cell;
+    position: absolute;
+    left: 8px;
+    margin-top: -8px !important;
+}
+
 .msb img.emoji {
   width: 16px;
   margin-left: 4px;
