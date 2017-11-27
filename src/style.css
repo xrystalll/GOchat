@@ -58,9 +58,11 @@ html, body {
   color: #34495e;
   word-break: break-word;
   background: #fff;
-  margin: 6px;
+  margin: 6px 0;
+  margin: 6px 8px;
   display: table;
   border-radius: 3px;
+  margin-left: 56px;
 }
 
 .msb span {
