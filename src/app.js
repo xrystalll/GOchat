@@ -12,7 +12,7 @@ i="0" + i;
 }
 return i;
 }
-var t = new Date();
+var time = new Date();
 var user = [];
 
 (function($) {
