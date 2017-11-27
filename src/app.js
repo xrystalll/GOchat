@@ -57,6 +57,7 @@ submit.onclick = function () {
         	message: getTxt
 	});
     input.val('');
+    console.log(time);
     }
 }
 
