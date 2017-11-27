@@ -63,6 +63,7 @@ html, body {
   display: table;
   border-radius: 3px;
   margin-left: 56px;
+  position: relative;
 }
 
 .msb span {
@@ -89,7 +90,7 @@ html, body {
   border-radius: 50%;
   display: table-cell;
   position: absolute;
-  left: 8px;
+  left: -53px;
   margin-top: -8px !important;
   color: #fff;
   line-height: 42px;
