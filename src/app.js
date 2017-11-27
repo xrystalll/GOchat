@@ -48,7 +48,7 @@ usernameInput.on('keyup', function(e) {
 var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
-    var getTime = time.getHours(), time.getMinutes();
+    var getTime = ('time.getHours()', 'time.getMinutes()');
     if (input.val().length > 0) {
         var getTxt = input.val();
         messages.push({
