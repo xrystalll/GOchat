@@ -53,7 +53,13 @@ html, body {
 }
 
 #status {
-  padding-bottom: 70px;
+  padding-bottom: 0px 16px 60px 0px;
+  height: 108px;
+}
+
+#status img {
+  max-width: 50px;
+  height: 48px;
 }
 
 .msb {
