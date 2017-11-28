@@ -11,25 +11,6 @@
 
 	<div class="wrapper"></div>
 
-	<script type="text/javascript">
-		var goTyp = new Object();
-		var inTypping = false;
-		$('input#emoji_c').keypress(function(){
-			clearInterval(goTyp);
-			if(!inTypping){
-				console.log('status : '+ 'Пользователь пишет');
-				inTypping = true;						
-			}
-			if(inTypping){
-				goTyp = setInterval(function(){
-					console.log('status : '+ 'Пользователь не пишет');
-					inTypping = false;	
-					clearInterval(goTyp);
-				}, 1000);
-			}
-		});
-	</script>
-	
 	<input class="message" type="text" id="emoji_c" maxlength="800" placeholder="Введите сообщение">
 	<input class="emoji_b" type="submit" onclick="emoji_alert()" value="mood">
 	<input class="send" type="submit" id="send" value="send">
