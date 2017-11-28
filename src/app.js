@@ -81,12 +81,12 @@ var inTypping = false;
 $('input#emoji_c').keypress(function(){
 	clearInterval(goTyp);
 	if(!inTypping){
-		console.log('+ $.sanitize(snap.val().user) + : '+ 'Пользователь пишет');
+		console.log('status : ' + 'Пользователь пишет');
 		inTypping = true;						
 	}
 	if(inTypping){
 		goTyp = setInterval(function(){
-			console.log('status : '+ 'Пользователь не пишет');
+			console.log('status : ' + 'Пользователь не пишет');
 			inTypping = false;	
 			clearInterval(goTyp);
 		}, 1000);
