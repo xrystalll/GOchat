@@ -124,12 +124,12 @@ var inTypping = false;
 $('input#emoji_c').keypress(function(){
 	clearInterval(goTyp);
 	if(!inTypping){
-		console.log('set status : '+ Пользователь пишет);
+		console.log('set status : '+ 'Пользователь пишет');
 		inTypping = true;						
 	}
 	if(inTypping){
 		goTyp = setInterval(function(){
-			console.log('set status : '+ Пользователь не пишет);
+			console.log('set status : '+ 'Пользователь не пишет');
 			inTypping = false;	
 			clearInterval(goTyp);
 		}, 1000);
