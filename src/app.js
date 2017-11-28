@@ -118,5 +118,3 @@ $(document).ready(function() {
       });
     });
 });
-
-alert(Object.keys(localStorage).join(';'))
