@@ -86,6 +86,7 @@ $('input#emoji_c').keypress(function(){
 	}
 	if(inTypping){
 		goTyp = setInterval(function(){
+			document.getElementById('status').innerHTML='';
 			inTypping = false;	
 			clearInterval(goTyp);
 		}, 1000);
