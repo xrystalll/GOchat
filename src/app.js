@@ -119,19 +119,19 @@ $(document).ready(function() {
     });
 });
 
-		var goTyp = new Object();
-			var inTypping = false;
-			$('input#emoji_c').keypress(function(){
-				clearInterval(goTyp);
-				if(!inTypping){
-					console.log('set status : '+1);
-					inTypping = true;						
-				}
-				if(inTypping){
-					goTyp = setInterval(function(){
-						console.log('set status : '+0);
-						inTypping = false;	
-						clearInterval(goTyp);
-					}, 1000);
-				}
-			});
+var goTyp = new Object();
+var inTypping = false;
+$('input#emoji_c').keypress(function(){
+	clearInterval(goTyp);
+	if(!inTypping){
+		console.log('set status : 'Пользователь пишет);
+		inTypping = true;						
+	}
+	if(inTypping){
+		goTyp = setInterval(function(){
+			console.log('set status : 'Пользователь не пишет);
+			inTypping = false;	
+			clearInterval(goTyp);
+		}, 1000);
+	}
+});
