@@ -53,12 +53,14 @@ html, body {
 }
 
 #status {
-  padding-bottom: 70px;
+  padding-bottom: 61px;
+  animation: fadeIn .4s ease-in-out forwards;
 }
 
 #status img.load {
   max-width: 50px;
   height: 48px;
+  margin-left: 6px;
 }
 
 .msb {
