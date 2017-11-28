@@ -344,10 +344,15 @@ input.message {
   padding-top: 56px;
 }
 
+.initModal img {
+  width: 72px;
+  height: 72px;
+}
+
 .initModal .appname {
-    color: #3F51B5;
-    font-size: 36px;
-    margin: 24px 24px 32px 24px;
+  color: #3F51B5;
+  font-size: 36px;
+  margin: 24px 24px 32px 24px;
 }
 
 .initModal .appname i {
