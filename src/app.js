@@ -76,6 +76,23 @@ input.on('keyup', function(e) {
 	}
 });
 
+var goTyp = new Object();
+var inTypping = false;
+$('input#emoji_c').keypress(function(){
+	clearInterval(goTyp);
+	if(!inTypping){
+		console.log('+ $.sanitize(snap.val().user) + : '+ 'Пользователь пишет');
+		inTypping = true;						
+	}
+	if(inTypping){
+		goTyp = setInterval(function(){
+			console.log('status : '+ 'Пользователь не пишет');
+			inTypping = false;	
+			clearInterval(goTyp);
+		}, 1000);
+	}
+});
+
 messages.limitToLast(100).on("child_added", function(snap) {
 	wrap.append('<div class="msb"><div class="cover">' + $.sanitize(snap.val().user) + '</div><span>' + $.sanitize(snap.val().user) + '</span> <time>' + $.sanitize(snap.val().time) + '</time><div>' + $.sanitize(snap.val().message) + '</div></div>');
 	window.scrollTo(0,document.body.scrollHeight);
