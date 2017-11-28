@@ -310,7 +310,7 @@ input.message {
 }
 
 .emoji_b-but:hover {
-    background-color: rgba(153, 153, 153, .2);
+    background-color: rgba(51, 102, 204, .2);
 }
 
 .es-board::-webkit-scrollbar {
