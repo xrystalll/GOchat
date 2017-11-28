@@ -86,7 +86,6 @@ $('input#emoji_c').keypress(function(){
 	}
 	if(inTypping){
 		goTyp = setInterval(function(){
-			document.getElementById('status').innerHTML='Пользователь не пишет';
 			inTypping = false;	
 			clearInterval(goTyp);
 		}, 1000);
