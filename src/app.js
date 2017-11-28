@@ -81,7 +81,6 @@ var inTypping = false;
 $('input#emoji_c').keypress(function(){
 	clearInterval(goTyp);
 	if(!inTypping){
-		var goTyp = document.getElementById('status');
 		console.log('status : ' + 'Пользователь пишет');
 		inTypping = true;						
 	}
