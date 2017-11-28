@@ -52,7 +52,7 @@ html, body {
   background-attachment: fixed;
 }
 
-.status {
+#status {
   padding-bottom: 70px;
 }
 
