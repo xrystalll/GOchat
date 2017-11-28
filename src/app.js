@@ -81,7 +81,7 @@ var inTypping = false;
 $('input#emoji_c').keypress(function(){
 	clearInterval(goTyp);
 	if(!inTypping){
-		document.getElementById('status').innerHTML='<img class="load" src="https://gardenlife.com.au/wp-content/themes/garden-life/images/loader.png" alt="load">';
+		document.getElementById('status').innerHTML='<img class="load" src="src/img/loader.gif" alt="load">';
 		inTypping = true;
 		window.scrollTo(0,document.body.scrollHeight);
 	}
