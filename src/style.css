@@ -57,7 +57,7 @@ html, body {
   height: 108px;
 }
 
-#status img {
+#status img.load {
   max-width: 50px;
   height: 48px;
 }
