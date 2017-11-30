@@ -80,14 +80,16 @@ html, body {
 }
 
 .msb:after {
-    content: "";
-    position: absolute;
-    left: -0.5em;
-    bottom: 0;
-    width: 0.5em;
-    height: 1em;
-    border-right: 0.5em solid #fff;
-    border-bottom-right-radius: 1em 0.5em;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -9px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 9px solid;
+  border-color: #fff transparent transparent transparent;
 }
 
 .msb.my {
@@ -95,6 +97,19 @@ html, body {
   margin-left: initial;
   margin-right: 56px;
   margin-top: initial;
+}
+
+.msb.my:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -9px;
+  top: 0px;
+  bottom: auto;
+  border: 9px solid;
+  border-color: #fff transparent transparent transparent;
 }
 
 .msb span {
