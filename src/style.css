@@ -79,7 +79,7 @@ html, body {
   clear: both;
 }
 
-.msb:after {
+/*.msb:after {
   content: '';
   position: absolute;
   width: 0;
@@ -90,7 +90,7 @@ html, body {
   bottom: auto;
   border: 9px solid;
   border-color: #fff transparent transparent transparent;
-}
+}*/
 
 .msb.my {
   float: right;
@@ -99,7 +99,7 @@ html, body {
   margin-top: initial;
 }
 
-.msb.my:after {
+/*.msb.my:after {
   content: '';
   position: absolute;
   width: 0;
@@ -110,7 +110,7 @@ html, body {
   bottom: auto;
   border: 9px solid;
   border-color: #fff transparent transparent transparent;
-}
+}*/
 
 .msb span {
   color: #3366CC;
