@@ -79,6 +79,17 @@ html, body {
   clear: both;
 }
 
+.msb:after {
+    content: "";
+    position: absolute;
+    left: -0.5em;
+    bottom: 0;
+    width: 0.5em;
+    height: 1em;
+    border-right: 0.5em solid #fff;
+    border-bottom-right-radius: 1em 0.5em;
+}
+
 .msb.my {
   float: right;
   margin-left: initial;
