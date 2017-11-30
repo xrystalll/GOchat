@@ -47,7 +47,7 @@ html, body {
 .wrapper {
   width: calc(100% - 16px);
   max-width: 720px;
-  margin: 0 auto;
+  margin: 8px auto 0;
   overflow-x: hidden;
   word-break: break-all;
 }
