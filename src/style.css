@@ -78,6 +78,13 @@ html, body {
   position: relative;
 }
 
+.msb.my {
+  float: right;
+  margin-left: initial;
+  margin-right: 56px;
+  margin-top: initial;
+}
+
 .msb span {
   color: #3366CC;
   font-weight: 700;
@@ -114,6 +121,11 @@ html, body {
 
 .cover:first-letter {
   font-size: 16px !important;
+}
+
+.my .cover {
+  left: initial;
+  right: -53px;
 }
 
 .msb img.emoji {
