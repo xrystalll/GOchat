@@ -76,6 +76,7 @@ html, body {
   border-radius: 3px;
   margin-left: 56px;
   position: relative;
+  clear: both;
 }
 
 .msb.my {
