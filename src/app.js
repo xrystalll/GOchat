@@ -57,6 +57,7 @@ submit.onclick = function () {
         	user: curUsername,
         	message: getTxt
 	});
+    localStorage.setItem("user","curUsername");
     input.val('');
     }
 }
