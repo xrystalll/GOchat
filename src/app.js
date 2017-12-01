@@ -42,6 +42,7 @@ usernameInput.on('keyup', function(e) {
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
 		console.log(user);
+		localStorage.setItem("curUsername","user");
 	}
 });
 
@@ -57,7 +58,6 @@ submit.onclick = function () {
         	user: curUsername,
         	message: getTxt
 	});
-    localStorage.setItem("user","curUsername");
     input.val('');
     }
 }
