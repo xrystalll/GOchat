@@ -12,8 +12,8 @@ var user = [];
 	$.sanitize = function(input) {
 		var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '#@$!*6').
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '&!2%=_^').
-					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
 					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^').
+					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
 					 replace(/#a01/gi, '<img class="emoji" src="src/img/a01.png">').
 					 replace(/#a02/gi, '<img class="emoji" src="src/img/a02.png">').
 					 replace(/#a03/gi, '<img class="emoji" src="src/img/a03.png">').
@@ -42,7 +42,7 @@ usernameInput.on('keyup', function(e) {
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
 		console.log(user);
-		localStorage.setItem("usernameInput","user");
+		localStorage.setItem(user);
 	}
 });
 
