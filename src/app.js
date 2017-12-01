@@ -42,7 +42,7 @@ usernameInput.on('keyup', function(e) {
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
 		console.log(user);
-		localStorage.setItem("curUsername","user");
+		localStorage.setItem("usernameInput","user");
 	}
 });
 
