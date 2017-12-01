@@ -42,7 +42,6 @@ usernameInput.on('keyup', function(e) {
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
 		console.log(user);
-		document.cookie = 'usernameInput=user';
 	}
 });
 
@@ -94,6 +93,9 @@ $('input#emoji_c').keypress(function(){
 		}, 1000);
 	}
 });
+
+
+		document.cookie = "user= ' + $.sanitize(snap.val().user) + '";
 
 messages.limitToLast(100).on("child_added", function(snap) {
 	wrap.append('<div class="msb"><div class="cover">' + $.sanitize(snap.val().user) + '</div><span>' + $.sanitize(snap.val().user) + '</span> <time>' + $.sanitize(snap.val().time) + '</time><div>' + $.sanitize(snap.val().message) + '</div></div>');
