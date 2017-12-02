@@ -23,6 +23,10 @@ var user = [];
 					 replace(/#a07/gi, '<img class="emoji" src="src/img/a07.png">').
 					 replace(/#a08/gi, '<img class="emoji" src="src/img/a08.png">').
 					 replace(/#a09/gi, '<img class="emoji" src="src/img/a09.png">').
+					 replace(/#b01/gi, '<img class="emoji" src="src/img/b01.png">').
+					 replace(/#b02/gi, '<img class="emoji" src="src/img/b02.png">').
+					 replace(/#b03/gi, '<img class="emoji" src="src/img/b03.png">').
+					 replace(/#b04/gi, '<img class="emoji" src="src/img/b04.png">').
 					 replace(/#z01/gi, '<img class="sticker" src="src/img/z01.png">').
 					 replace(/#z02/gi, '<img class="sticker" src="src/img/z02.png">').
 					 replace(/#z03/gi, '<img class="sticker" src="src/img/z03.png">').
