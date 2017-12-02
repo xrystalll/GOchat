@@ -163,7 +163,7 @@ html, body {
 .msb img.sticker {
   max-width: 148px;
   width: 100%;
-  float: right;
+  display: block;
   margin-left: 6px;
 }
 
