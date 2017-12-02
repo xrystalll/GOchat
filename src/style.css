@@ -54,13 +54,9 @@ html, body {
 
 #status {
   width: calc(100% - 16px);
-  width: 100%;
   max-width: 720px;
   margin: 0 auto;
   padding-bottom: 61px;
-  margin: 0 8px;
-  position: absolute;
-  bottom: 52px;
   animation: fadeIn .4s ease-in-out forwards;
 }
 
