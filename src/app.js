@@ -40,7 +40,7 @@ usernameInput.on('keyup', function(e) {
 		var localValue = localStorage.getItem('username');
 		var getTxt = usernameInput.val();
 		user.push(getTxt);
-		usernameInput.val('username');
+		usernameInput.val('localValue');
 		$('.initModal').css('display', 'none');
 		console.log(user);
 	}
