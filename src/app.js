@@ -36,9 +36,9 @@ var user = [];
 
 
 usernameInput.on('keyup', function(e) {
-	var localValue = localStorage.getItem('username');
-	if (e.keyCode === 13 && usernameInput.val('localValue').length > 0) {
-		var getTxt = usernameInput.val();
+	if (e.keyCode === 13 && usernameInput.val().length > 0) {
+		var localValue = localStorage.getItem('username');
+		var getTxt = usernameInput.val('username');
 		user.push(getTxt);
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
