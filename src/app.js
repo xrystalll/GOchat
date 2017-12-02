@@ -99,7 +99,7 @@ messages.limitToLast(100).on("child_added", function(snap) {
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
-var elements = document.querySelectorAll('input');
+var elements = document.querySelectorAll('input#username');
 
 function checkValidity() {};
 
