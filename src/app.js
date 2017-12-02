@@ -106,9 +106,9 @@ function checkValidity() {};
 for (i=0; i<elements.length; i++) {
  (function(element) {
    var id = element.getAttribute('id');
-   element.value = sessionStorage.getItem(id);
+   element.value = localStorage.getItem(id);
    element.oninput = function() {
-     sessionStorage.setItem(id, element.value);
+     localStorage.setItem(id, element.value);
      checkValidity();
    };
  })(elements[i]);
