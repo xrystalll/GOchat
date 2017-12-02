@@ -99,6 +99,21 @@ messages.limitToLast(100).on("child_added", function(snap) {
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
+var elements = document.querySelectorAll('input');
+
+function checkValidity() {};
+
+for (i=0; i<elements.length; i++) {
+ (function(element) {
+   var id = element.getAttribute('id');
+   element.value = sessionStorage.getItem(id);
+   element.oninput = function() {
+     sessionStorage.setItem(id, element.value);
+     checkValidity();
+   };
+ })(elements[i]);
+}
+
 function emoji_alert() {
    document.getElementById("emoji_b").classList.toggle("vis");
 }
