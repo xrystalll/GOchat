@@ -157,8 +157,8 @@ html, body {
 }
 
 .msb img.emoji {
-  width: 16px;
-  margin-left: 4px;
+  width: 18px;
+  vertical-align: text-bottom;
 }
 
 .msb img.sticker {
