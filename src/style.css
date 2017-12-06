@@ -167,6 +167,10 @@ html, body {
   margin-left: 6px;
 }
 
+.pic {
+  max-width: 480px;
+}
+
 input.message {
   width: 100%;
   position: fixed;
