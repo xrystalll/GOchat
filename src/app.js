@@ -14,7 +14,7 @@ var user = [];
 					 replace(/<[\/\!]*?[^<>]*?>/gi, '&!2%=_^').
 					 replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '@#%&7^').
 					 replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
-					 replace(/\[img].$1\[img]/gi, '<img class="pic" src="\.$1\">').
+					 replace(/\[img]$1\[img]/gi, '<img class="pic" src="\$1\">').
 					 replace(/#a01/gi, '<img class="emoji" src="src/img/a01.png">').
 					 replace(/#a02/gi, '<img class="emoji" src="src/img/a02.png">').
 					 replace(/#a03/gi, '<img class="emoji" src="src/img/a03.png">').
