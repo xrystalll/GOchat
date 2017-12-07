@@ -419,8 +419,8 @@ input.message {
 
 .initModal input.username {
   max-width: 400px;
-  width: calc(100% - 24px);
-  height: 60px;
+  width: calc(100% - 16px);
+  height: 48px;
   background-color: #eee;
   border-radius: 2px;
   padding: 0 15px;
