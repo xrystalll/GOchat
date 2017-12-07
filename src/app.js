@@ -51,7 +51,7 @@ document.getElementById('emoji_c').onpaste = function (event) {
     var reader = new FileReader();
     reader.onload = function(event) {
       document.getElementById("pastedImage").src = event.target.result;
-      document.getElementById("emoji_c").value = [\/img]event.target.result\[/img];
+      document.getElementById("emoji_c").value = '[img]'+ event.target.result +'[/img]';
 
     };
     reader.readAsDataURL(blob);
