@@ -39,6 +39,31 @@ var user = [];
 	};
 })(jQuery);
 
+document.getElementById('emoji_c').onpaste = function (event) {
+  var items = (event.clipboardData  || event.originalEvent.clipboardData).items;
+  var blob = null;
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].type.indexOf("image") === 0) {
+      blob = items[i].getAsFile();
+    }
+  }
+  if (blob !== null) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      document.getElementById("pastedImage").src = event.target.result;
+      document.getElementById("emoji_c").value = event.target.result;
+	    //[\/img]event.target.result\[/img]
+
+    };
+    reader.readAsDataURL(blob);
+  }
+}
+
+$( document ).ready(function(){
+	$( "#pastedImage, #send" ).click(function(){
+		$( "img#pastedImage").removeAttr("src");
+	});
+});
 
 usernameInput.on('keyup', function(e) {
 	if (e.keyCode === 13 && usernameInput.val().length > 0) {
@@ -155,28 +180,4 @@ $(document).ready(function() {
           this.toggleClass('out');
       });
     });
-});
-
-document.getElementById('emoji_c').onpaste = function (event) {
-  var items = (event.clipboardData  || event.originalEvent.clipboardData).items;
-  var blob = null;
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].type.indexOf("image") === 0) {
-      blob = items[i].getAsFile();
-    }
-  }
-  if (blob !== null) {
-    var reader = new FileReader();
-    reader.onload = function(event) {
-      
-      document.getElementById("pastedImage").src = event.target.result;
-    };
-    reader.readAsDataURL(blob);
-  }
-}
-
-$( document ).ready(function(){
-	$( "#pastedImage, #send" ).click(function(){
-		$( "img#pastedImage").removeAttr("src");
-	});
 });
