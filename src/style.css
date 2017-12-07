@@ -173,12 +173,13 @@ html, body {
 }
 
 img#pastedImage {
-  max-width: 168px;
+  max-width: 172px;
   position: fixed;
   bottom: 54px;
   left: 8px;
   background: #fff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 input.message {
