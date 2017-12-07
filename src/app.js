@@ -159,7 +159,6 @@ $(document).ready(function() {
 
 document.getElementById('emoji_c').onpaste = function (event) {
   var items = (event.clipboardData  || event.originalEvent.clipboardData).items;
-  
   var blob = null;
   for (var i = 0; i < items.length; i++) {
     if (items[i].type.indexOf("image") === 0) {
@@ -177,7 +176,7 @@ document.getElementById('emoji_c').onpaste = function (event) {
 }
 
 $( document ).ready(function(){
-	$( "#send" ).click(function(){
+	$( "#pastedImage, #send" ).click(function(){
 		$( "img#pastedImage").removeAttr("src");
 	});
 });
