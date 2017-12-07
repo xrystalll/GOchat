@@ -169,7 +169,7 @@ document.getElementById('emoji_c').onpaste = function (event) {
   if (blob !== null) {
     var reader = new FileReader();
     reader.onload = function(event) {
-      console.log(event.target.result);
+      
       document.getElementById("pastedImage").src = event.target.result;
     };
     reader.readAsDataURL(blob);
