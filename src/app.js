@@ -61,7 +61,7 @@ document.getElementById('emoji_c').onpaste = function (event) {
 $( document ).ready(function(){
 	$( "#pastedImage, #send" ).click(function(){
 		$( "img#pastedImage").removeAttr("src");
-		$( "input#emoji_c").removeAttr("value");
+		$( "#emoji_c").removeAttr("value");
 	});
 });
 
