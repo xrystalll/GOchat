@@ -156,3 +156,22 @@ $(document).ready(function() {
       });
     });
 });
+
+document.getElementById('emoji_c').onpaste = function (event) {
+  var items = (event.clipboardData  || event.originalEvent.clipboardData).items;
+  console.log(JSON.stringify(items));
+  var blob = null;
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].type.indexOf("image") === 0) {
+      blob = items[i].getAsFile();
+    }
+  }
+  if (blob !== null) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      console.log(event.target.result);
+      document.getElementById("pastedImage").src = event.target.result;
+    };
+    reader.readAsDataURL(blob);
+  }
+}
