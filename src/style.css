@@ -173,10 +173,10 @@ html, body {
 }
 
 img#pastedImage {
-  max-width: 371px;
+  max-width: 168px;
   position: fixed;
   bottom: 66px;
-  right: 8px;
+  left: 8px;
   background: #fff;
   padding: 4px;
   border-radius: 4px;
