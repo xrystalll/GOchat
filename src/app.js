@@ -175,3 +175,9 @@ document.getElementById('emoji_c').onpaste = function (event) {
     reader.readAsDataURL(blob);
   }
 }
+
+$( document ).ready(function(){
+	$( "#send" ).click(function(){
+		$( "img#pastedImage").removeAttr("src");
+	});
+});
