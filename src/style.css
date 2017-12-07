@@ -169,6 +169,7 @@ html, body {
 
 .pic {
   max-width: 480px;
+  width: 100%;
 }
 
 img#pastedImage {
@@ -179,15 +180,6 @@ img#pastedImage {
   background: #fff;
   padding: 4px;
   border-radius: 4px;
-}
-
-img#pastedImage:after {
-  content: ' ';
-  position: fixed;
-  right: 28px;
-  bottom: 66px;
-  border: 20px solid transparent;
-  border-top: 20px solid #fff;
 }
 
 input.message {
