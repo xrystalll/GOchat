@@ -173,9 +173,7 @@ html, body {
 }
 
 img#pastedImage {
-  width: 100%;
   max-width: 172px;
-  height: 100%;
   max-height: 172px;
   position: fixed;
   bottom: 54px;
