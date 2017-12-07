@@ -183,6 +183,13 @@ img#pastedImage {
   cursor: pointer;
 }
 
+img#pastedImage:hover::after {
+  background: rgba(0, 0, 0, 0.30);
+  content: 'close';
+  font-family: 'Material Icons';
+  color: #fff;
+}
+
 input.message {
   width: 100%;
   position: fixed;
