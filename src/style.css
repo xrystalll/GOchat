@@ -56,7 +56,7 @@ html, body {
   width: calc(100% - 16px);
   max-width: 720px;
   margin: 0 auto;
-  padding-bottom: 61px;
+  padding-bottom: 50px;
   animation: fadeIn .4s ease-in-out forwards;
 }
 
@@ -175,7 +175,7 @@ html, body {
 img#pastedImage {
   max-width: 168px;
   position: fixed;
-  bottom: 66px;
+  bottom: 54px;
   left: 8px;
   background: #fff;
   border-radius: 4px;
@@ -185,7 +185,7 @@ input.message {
   width: 100%;
   position: fixed;
   bottom: 0;
-  height: 60px;
+  height: 48px;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .12);
   padding: 0 80px 0 16px;
@@ -201,7 +201,7 @@ input.message {
   cursor: pointer;
   position: fixed;
   left: calc(100% - 48px);
-  height: 60px;
+  height: 48px;
   width: 48px;
   bottom: 0;
   background: #fff;
@@ -214,7 +214,7 @@ input.message {
   cursor: pointer;
   position: fixed;
   left: calc(100% - 80px);
-  height: 60px;
+  height: 48px;
   width: 32px;
   bottom: 0;
   background: #fff;
@@ -235,7 +235,7 @@ input.message {
     display: block;
     background: #fff;
     position: fixed;
-    bottom: 60px;
+    bottom: 48px;
     left: 0;
     right: 0;
     box-sizing: border-box;
