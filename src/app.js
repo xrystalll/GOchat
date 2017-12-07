@@ -61,9 +61,11 @@ document.getElementById('emoji_c').onpaste = function (event) {
 $( document ).ready(function(){
 	$("#pastedImage, #send").click(function(){
 		$("img#pastedImage").removeAttr("src");
-		$("input#emoji_c").removeAttr("value");
 	});
 });
+document.getElementById("pastedImage").onclick = function(e){
+	document.getElementById("emoji_c").value = "";
+}
 
 usernameInput.on('keyup', function(e) {
 	if (e.keyCode === 13 && usernameInput.val().length > 0) {
