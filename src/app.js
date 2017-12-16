@@ -77,10 +77,12 @@ for (i = 0; i < elements.length; i++) {
       localStorage.setItem(id, element.value);
       checkValidity();
     }
-    var getTxt = localStorage.getItem(id)
-    user.push(getTxt);
-    $('.initModal').css('display', 'none');
-    console.log(user);
+	if (localStorage.getItem(id).length > 0) {
+		var getTxt = localStorage.getItem(id)
+    		user.push(getTxt);
+    		$('.initModal').css('display', 'none');
+    		console.log(user);
+	};
   })(elements[i]);
 }
 
