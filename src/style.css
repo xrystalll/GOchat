@@ -157,7 +157,7 @@ border-color: #fff transparent transparent transparent;
 
 .msb img.emoji {
 	width: 18px;
-	vertical-align: text-bottom;
+	vertical-align: middle;
 }
 
 .msb img.sticker {
