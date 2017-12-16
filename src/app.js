@@ -81,8 +81,8 @@ for (i=0; i<elements.length; i++) {
 }
 
 usernameInput.on('keyup', function(e) {
-	if (e.keyCode === 13 && usernameInput.val().length > 0) {
-		var getTxt = localStorage.getItem(id) || usernameInput.val()
+	if (e.keyCode === 13 && usernameInput.val().length > 0 && localStorage.getItem(id).length > 0) {
+		var getTxt = usernameInput.val()
 		user.push(getTxt);
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
