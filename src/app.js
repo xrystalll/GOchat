@@ -82,9 +82,7 @@ for (i=0; i<elements.length; i++) {
 
 usernameInput.on('keyup', function(e) {
 	if (e.keyCode === 13 && usernameInput.val().length > 0) {
-		var getTxt = usernameInput.val()
-			if (1) {
-			var getTxt = localStorage.getItem(id);}
+		var getTxt = usernameInput.val() || localStorage.getItem(id)
 		user.push(getTxt);
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
