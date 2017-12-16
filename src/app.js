@@ -77,7 +77,7 @@ for (i = 0; i < elements.length; i++) {
       localStorage.setItem(id, element.value);
       checkValidity();
     }
-    if (0 < localStorage.getItem(id).length; i++) {
+    if (localStorage.getItem(id).length > 0) {
       var getTxt = localStorage.getItem(id);
       user.push(getTxt);
       $('.initModal').css('display', 'none');
