@@ -67,9 +67,23 @@ document.getElementById("pastedImage").onclick = function(e){
 	document.getElementById("emoji_c").value = "";
 }
 
+var elements = document.querySelectorAll('input#username');
+function checkValidity() {};
+for (i=0; i<elements.length; i++) {
+ (function(element) {
+   var id = element.getAttribute('id');
+   element.value = localStorage.getItem(id);
+   element.oninput = function() {
+     localStorage.setItem(id, element.value);
+     checkValidity();
+   };
+ })(elements[i]);
+}
+
 usernameInput.on('keyup', function(e) {
 	if (e.keyCode === 13 && usernameInput.val().length > 0) {
-		var getTxt = usernameInput.val();
+		var getTxt = usernameInput.val()
+			if (getTxt = localStorage.getItem(id));
 		user.push(getTxt);
 		usernameInput.val('');
 		$('.initModal').css('display', 'none');
@@ -130,21 +144,6 @@ messages.limitToLast(100).on("child_added", function(snap) {
 	wrap.append('<div class="msb"><div class="cover">' + $.sanitize(snap.val().user) + '</div><span>' + $.sanitize(snap.val().user) + '</span> <time>' + $.sanitize(snap.val().time) + '</time><div>' + $.sanitize(snap.val().message) + '</div></div>');
 	window.scrollTo(0,document.body.scrollHeight);
 });
-
-var elements = document.querySelectorAll('input#username');
-
-function checkValidity() {};
-
-for (i=0; i<elements.length; i++) {
- (function(element) {
-   var id = element.getAttribute('id');
-   element.value = localStorage.getItem(id);
-   element.oninput = function() {
-     localStorage.setItem(id, element.value);
-     checkValidity();
-   };
- })(elements[i]);
-}
 
 function emoji_alert() {
    document.getElementById("emoji_b").classList.toggle("vis");
