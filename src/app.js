@@ -40,7 +40,7 @@ var user = [];
 })(jQuery);
 
 document.getElementById('emoji_c').onpaste = function (event) {
-  var items = (event.clipboardData  || event.originalEvent.clipboardData).items;
+  var items = (event.clipboardData || event.originalEvent.clipboardData).items;
   var blob = null;
   for (var i = 0; i < items.length; i++) {
     if (items[i].type.indexOf("image") === 0) {
@@ -68,8 +68,8 @@ document.getElementById("pastedImage").onclick = function(e){
 }
 
 var elements = document.querySelectorAll('input#username');
-function checkValidity() {};
-for (i=0; i<elements.length; i++) {
+function checkValidity();
+for (i = 0; i < elements.length; i++) {
  (function(element) {
    var id = element.getAttribute('id');
    element.value = localStorage.getItem(id);
