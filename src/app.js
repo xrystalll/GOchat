@@ -67,12 +67,17 @@ document.getElementById("pastedImage").onclick = function(e){
 	document.getElementById("emoji_c").value = "";
 }
 
-$username = document.getElementById('username')
-if(localStorage['user']) {
-	un.value = localStorage['user']
-}
-$username.oninput=function() {
-	localStorage['user'] = this.value
+var elements = document.querySelectorAll('input#username');
+function checkValidity() {};
+for (i = 0; i < elements.length; i++) {
+ (function(element) {
+   var id = element.getAttribute('id');
+   element.value = localStorage.getItem(id);
+   element.oninput = function() {
+     localStorage.setItem(id, element.value);
+     checkValidity();
+   };
+ })(elements[i]);
 }
 
 usernameInput.on('keyup', function(e) {
