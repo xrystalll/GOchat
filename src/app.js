@@ -81,14 +81,14 @@ for (i = 0; i < elements.length; i++) {
 }
 
 $username = document.getElementById('username')
-if(localStorage['user']){
- un.value=localStorage['user']
+if(localStorage['username']) {
+ un.value = localStorage['username']
 }
 else{
- un.value='Гость'
+ un.value = 'Guest';
 }
-$username.oninput=function(){
- localStorage['user']=this.value
+$username.oninput=function() {
+ localStorage['user'] = this.value
 }
 
 usernameInput.on('keyup', function(e) {
