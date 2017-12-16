@@ -73,6 +73,7 @@ for (i = 0; i < elements.length; i++) {
  (function(element) {
    var id = element.getAttribute('id');
    element.value = localStorage.getItem(id);
+   $('.initModal').css('display', 'none');
    element.oninput = function() {
      localStorage.setItem(id, element.value);
      checkValidity();
