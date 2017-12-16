@@ -79,6 +79,7 @@ for (i = 0; i < elements.length; i++) {
     }
     var getTxt = localStorage.getItem(id)
     user.push(getTxt);
+    console.log(user);
   })(elements[i]);
 }
 
