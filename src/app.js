@@ -80,6 +80,17 @@ for (i = 0; i < elements.length; i++) {
  })(elements[i]);
 }
 
+$username = document.getElementById('username')
+if(localStorage['user']){
+ un.value=localStorage['user']
+}
+else{
+ un.value='Гость'
+}
+$username.oninput=function(){
+ localStorage['user']=this.value
+}
+
 usernameInput.on('keyup', function(e) {
 	if (e.keyCode === 13 && usernameInput.val().length > 0) {
 		var getTxt = usernameInput.val()
