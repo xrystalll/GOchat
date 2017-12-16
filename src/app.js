@@ -85,7 +85,7 @@ if(localStorage['username']) {
  un.value = localStorage['username']
 }
 $username.oninput=function() {
- localStorage['user'] = this.value
+ localStorage['username'] = this.value
 }
 
 usernameInput.on('keyup', function(e) {
