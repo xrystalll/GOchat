@@ -81,6 +81,15 @@ for (i=0; i<elements.length; i++) {
 }
 
 usernameInput.on('keyup', function(e) {
+	if (e.keyCode === 13 && localStorage.getItem(id).length > 0) {
+		var getTxt = localStorage.getItem(id)
+		user.push(getTxt);
+		localStorage.getItem(id);
+		$('.initModal').css('display', 'none');
+	}
+});
+
+usernameInput.on('keyup', function(e) {
 	if (e.keyCode === 13 && usernameInput.val().length > 0) {
 		var getTxt = usernameInput.val()
 		user.push(getTxt);
