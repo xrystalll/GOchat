@@ -68,7 +68,7 @@ document.getElementById("pastedImage").onclick = function(e){
 }
 
 var elements = document.querySelectorAll('input#username');
-function checkValidity();
+function checkValidity() {};
 for (i = 0; i < elements.length; i++) {
  (function(element) {
    var id = element.getAttribute('id');
