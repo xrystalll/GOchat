@@ -70,7 +70,6 @@ document.getElementById("pastedImage").onclick = function(e){
 var elements = document.querySelectorAll('input#username');
 function checkValidity() {};
 for (i = 0; i < elements.length; i++) {
-  $('.initModal').css('display', 'none');
   (function(element) {
     var id = element.getAttribute('id');
     element.value = localStorage.getItem(id);
@@ -78,6 +77,8 @@ for (i = 0; i < elements.length; i++) {
       localStorage.setItem(id, element.value);
       checkValidity();
     }
+    var getTxt = localStorage.getItem(id)
+    user.push(getTxt);
   })(elements[i]);
 }
 
