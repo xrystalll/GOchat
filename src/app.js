@@ -67,6 +67,15 @@ document.getElementById("pastedImage").onclick = function(e){
 	document.getElementById("emoji_c").value = "";
 }
 
+usernameInput.on('keyup', function(e) {
+	if (e.keyCode === 13 && usernameInput.val().length > 0) {
+		var getTxt = usernameInput.val()
+		user.push(getTxt);
+		usernameInput.val('');
+		$('.initModal').css('display', 'none');
+		console.log(user);
+	}
+
 var elements = document.querySelectorAll('input#username');
 function checkValidity() {};
 for (i=0; i<elements.length; i++) {
@@ -80,14 +89,12 @@ for (i=0; i<elements.length; i++) {
  })(elements[i]);
 }
 
-usernameInput.on('keyup', function(e) {
-	if (e.keyCode === 13 && usernameInput.val().length > 0) {
-		var getTxt = usernameInput.val()
+	if (localStorage.getItem().length > 0) {
+		var getTxt = localStorage.getItem()
 		user.push(getTxt);
-		usernameInput.val('');
 		$('.initModal').css('display', 'none');
-		console.log(user);
-	}
+	    }
+
 });
 
 var submit = document.getElementById('send');
