@@ -84,9 +84,6 @@ $username = document.getElementById('username')
 if(localStorage['username']) {
  un.value = localStorage['username']
 }
-else{
- un.value = 'Guest';
-}
 $username.oninput=function() {
  localStorage['user'] = this.value
 }
