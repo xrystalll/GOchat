@@ -77,15 +77,14 @@ for (i = 0; i < elements.length; i++) {
       localStorage.setItem(id, element.value);
       checkValidity();
     }
-    
-localStorage.on('keyup', function(e) {
-    if (e.keyCode === 13 && element.value.length > 0) {
-      var getTxt = localStorage.getItem(id);
-      user.push(getTxt);
-      $('.initModal').css('display', 'none');
-      console.log(user);
-    }
-});
+    usernameInput.on('keyup', function(e) {
+      if (e.keyCode === 13 && element.value.length > 0) {
+        var getTxt = localStorage.getItem(id);
+        user.push(getTxt);
+        $('.initModal').css('display', 'none');
+        console.log(user);
+      }
+    });
   })(elements[i]);
 }
 
