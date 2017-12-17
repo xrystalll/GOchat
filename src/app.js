@@ -104,6 +104,18 @@ for (i = 0; i < elements.length; i++) {
 			localStorage.setItem(id, element.value);
 			checkValidity();
 		}
+		if (element.value.length > 0) {
+			var getTxt = localStorage.getItem(id);
+			image.push(getTxt);
+			console.log(image);
+		}
+		usernameInput.on('keyup', function(e) {
+			if (e.keyCode === 13 && element.value.length > 0) {
+				var getTxt = localStorage.getItem(id);
+				image.push(getTxt);
+				console.log(image);
+			}
+		});
 	})(elements[i]);
 }
 
@@ -118,7 +130,6 @@ submit.onclick = function () {
 		messages.push({
 			time: nowTime,
 			user: curUsername,
-			image: imgAvatar,
 			message: getTxt
 		});
 		input.val('');
