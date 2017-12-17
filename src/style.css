@@ -419,7 +419,7 @@ input.message {
 	color: #777;
 }
 
-.initModal input.username {
+.initModal input.username, .initModal input.image {
 	max-width: 400px;
 	width: calc(100% - 16px);
 	height: 48px;
