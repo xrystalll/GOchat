@@ -94,9 +94,17 @@ for (i = 0; i < elements.length; i++) {
 	})(elements[i]);
 }
 
-$imgAvatar = document.getElementById('imgAvatar')
-if(localStorage['image']){
-	un.value = localStorage.getItem(image);
+var elements = document.querySelectorAll('input#imgAvatar');
+function checkValidity() {};
+for (i = 0; i < elements.length; i++) {
+	(function(element) {
+		var image = element.getAttribute('image');
+		element.value = localStorage.getItem(image);
+		element.oninput = function() {
+			localStorage.setItem(image, element.value);
+			checkValidity();
+		}
+	})(elements[i]);
 }
 
 var submit = document.getElementById('send');
