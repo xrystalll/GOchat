@@ -94,9 +94,18 @@ for (i = 0; i < elements.length; i++) {
   })(elements[i]);
 }
 
+$username = document.getElementById('imgAvatar')
+if(localStorage['image']){
+un.value=localStorage['image']
+}else{
+un.value='http://v9116084.bget.ru/files/goload_2584_1512493288.png'
+}
+$username.oninput=function(){localStorage['image']=this.value}
+
 var submit = document.getElementById('send');
 submit.onclick = function () {
     var curUsername = user.join();
+    var imgAvatar = localStorage.getItem(image);
     var tm = new Date();
     var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
     if (input.val().length > 0) {
@@ -104,6 +113,7 @@ submit.onclick = function () {
         messages.push({
 		time: nowTime,
         	user: curUsername,
+		image: imgAvatar,
         	message: getTxt
 	});
     input.val('');
