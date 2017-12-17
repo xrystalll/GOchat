@@ -94,18 +94,14 @@ for (i = 0; i < elements.length; i++) {
 	})(elements[i]);
 }
 
+$imgAvatar = document.getElementById('imgAvatar')
+if(localStorage['image']){
+	un.value = localStorage.getItem(image);
+}
+
 var submit = document.getElementById('send');
 submit.onclick = function () {
 	var curUsername = user.join();
-	
-	$username = document.getElementById('imgAvatar')
-	if(localStorage['image']){
-		un.value=localStorage['image']
-	}
-	$username.oninput=function(){
-		localStorage['image']=this.value
-	}
-
 	var imgAvatar = localStorage.getItem(image);
 	var tm = new Date();
 	var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
