@@ -4,8 +4,9 @@ var btn = $('button');
 var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
+var userimageInput = $('input.image');
 function checkTime(i) { if (i<10) { i="0" + i; } return i; }
-
+var image = [];
 var user = [];
 
 (function($) {
@@ -109,7 +110,7 @@ for (i = 0; i < elements.length; i++) {
 			image.push(getTxt);
 			console.log(image);
 		}
-		usernameInput.on('keyup', function(e) {
+		userimageInput.on('keyup', function(e) {
 			if (e.keyCode === 13 && element.value.length > 0) {
 				var getTxt = localStorage.getItem(id);
 				image.push(getTxt);
@@ -122,7 +123,6 @@ for (i = 0; i < elements.length; i++) {
 var submit = document.getElementById('send');
 submit.onclick = function () {
 	var curUsername = user.join();
-	var imgAvatar = localStorage.getItem(image);
 	var tm = new Date();
 	var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
 	if (input.val().length > 0) {
