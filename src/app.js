@@ -6,7 +6,7 @@ var input = $('input.message');
 var usernameInput = $('input.username');
 var userimageInput = $('input.image');
 function checkTime(i) { if (i<10) { i="0" + i; } return i; }
-var image = ['http://v9116084.bget.ru/files/goload_2584_1512493288.png'  ||  localStorage.getItem(image)];
+var image = [localStorage.setItem('image', 'http://v9116084.bget.ru/files/goload_2584_1512493288.png')];
 var user = [];
 
 (function($) {
