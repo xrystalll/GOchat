@@ -123,6 +123,7 @@ for (i = 0; i < elements.length; i++) {
 var submit = document.getElementById('send');
 submit.onclick = function () {
 	var curUsername = user.join();
+	var curUserimage = image.join();
 	var tm = new Date();
 	var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
 	if (input.val().length > 0) {
@@ -130,6 +131,7 @@ submit.onclick = function () {
 		messages.push({
 			time: nowTime,
 			user: curUsername,
+			image: curUserimage,
 			message: getTxt
 		});
 		input.val('');
@@ -138,6 +140,7 @@ submit.onclick = function () {
 
 input.on('keyup', function(e) {
 	var curUsername = user.join();
+	var curUserimage = image.join();
 	var tm = new Date();
 	var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
 	if (e.keyCode === 13 && input.val().length > 0) {
@@ -145,6 +148,7 @@ input.on('keyup', function(e) {
 		messages.push({
 			time: nowTime,
 			user: curUsername,
+			image: curUserimage,
 			message: getTxt
 		});
 		input.val('');
