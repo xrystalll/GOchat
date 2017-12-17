@@ -94,14 +94,14 @@ for (i = 0; i < elements.length; i++) {
 	})(elements[i]);
 }
 
-var elements = document.querySelectorAll('input#imgAvatar');
+var elements = document.querySelectorAll('input#image');
 function checkValidity() {};
 for (i = 0; i < elements.length; i++) {
 	(function(element) {
-		var image = element.getAttribute('image');
-		element.value = localStorage.getItem(image);
+		var id = element.getAttribute('id');
+		element.value = localStorage.getItem(id);
 		element.oninput = function() {
-			localStorage.setItem(image, element.value);
+			localStorage.setItem(id, element.value);
 			checkValidity();
 		}
 	})(elements[i]);
