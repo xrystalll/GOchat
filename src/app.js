@@ -108,12 +108,14 @@ for (i = 0; i < elements.length; i++) {
 		if (element.value.length > 0) {
 			var getTxt = localStorage.getItem(id);
 			image.push(getTxt);
+			$('.initModal').css('display', 'none');
 			console.log(image);
 		}
 		userimageInput.on('keyup', function(e) {
 			if (e.keyCode === 13 && element.value.length > 0) {
 				var getTxt = localStorage.getItem(id);
 				image.push(getTxt);
+				$('.initModal').css('display', 'none');
 				console.log(image);
 			}
 		});
