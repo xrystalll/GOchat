@@ -97,8 +97,6 @@ for (i = 0; i < elements.length; i++) {
 $username = document.getElementById('imgAvatar')
 if(localStorage['image']){
 	un.value=localStorage['image']
-}else{
-	un.value='http://v9116084.bget.ru/files/goload_2584_1512493288.png'
 }
 $username.oninput=function(){localStorage['image']=this.value}
 
