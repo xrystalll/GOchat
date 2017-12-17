@@ -103,12 +103,12 @@ for (i = 0; i < elements.length; i++) {
 		element.value = localStorage.getItem(id);
 		element.oninput = function() {
 			localStorage.setItem(id, element.value);
-			$('.initModal').css('display', 'none');
 			checkValidity();
 		}
 		if (element.value.length > 0) {
 			var getTxt = localStorage.getItem(id);
 			image.push(getTxt);
+			$('.initModal').css('display', 'none');
 			console.log(image);
 		}
 		userimageInput.on('keyup', function(e) {
