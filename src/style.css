@@ -132,22 +132,19 @@ border-color: #fff transparent transparent transparent;
 }
 
 .cover {
-	width: 42px;
-	height: 42px;
-	background: #3366CC;
-	border-radius: 50%;
-	display: table-cell;
-	position: absolute;
-	left: -53px;
-	margin-top: -8px !important;
-	color: #fff;
-	line-height: 42px;
-	text-align: center;
-	font-size: 0 !important;
-}
-
-.cover:first-letter {
-	font-size: 16px !important;
+    width: 42px;
+    height: 42px;
+    background: #3366CC;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: table-cell;
+    position: absolute;
+    left: -53px;
+    margin-top: -8px !important;
+    color: #fff;
+    line-height: 42px;
+    text-align: center;
 }
 
 .my .cover {
