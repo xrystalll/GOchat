@@ -6,7 +6,8 @@ var input = $('input.message');
 var usernameInput = $('input.username');
 var userimageInput = $('input.image');
 function checkTime(i) { if (i<10) { i="0" + i; } return i; }
-var image = []
+
+var image = [];
 var user = [];
 
 (function($) {
@@ -108,14 +109,13 @@ for (i = 0; i < elements.length; i++) {
 		if (element.value.length > 0) {
 			var getTxt = localStorage.getItem(id);
 			image.push(getTxt);
-			$('.initModal').css('display', 'none');
-			console.log(image);
+			$('.chk').css('display', 'none');
 		}
 		userimageInput.on('keyup', function(e) {
 			if (e.keyCode === 13 && element.value.length > 0) {
 				var getTxt = localStorage.getItem(id);
 				image.push(getTxt);
-				console.log(image);
+				$('.chk').css('display', 'none');
 			}
 		});
 	})(elements[i]);
@@ -171,13 +171,22 @@ $('input#emoji_c').keypress(function(){
 			inTypping = false;	
 			clearInterval(goTyp);
 		}, 1000);
-	}
+}
 });
 
 messages.limitToLast(100).on("child_added", function(snap) {
-	wrap.append('<div class="msb"><div class="cover" style="background-image: url(' + $.sanitize(snap.val().image) + ');">' + $.sanitize(snap.val().user) + '</div><span>' + $.sanitize(snap.val().user) + '</span> <time>' + $.sanitize(snap.val().time) + '</time><div>' + $.sanitize(snap.val().message) + '</div></div>');
+	wrap.append('<div class="msb"><div  onclick="DoSmilie(&#39;' + $.sanitize(snap.val().user) + ',&#39;);" class="cover" style="background-image: url(' + $.sanitize(snap.val().image) + ');">' + $.sanitize(snap.val().user) + '</div><span>' + $.sanitize(snap.val().user) + '</span> <time>' + $.sanitize(snap.val().time) + '</time><div>' + $.sanitize(snap.val().message) + '</div></div>');
 	window.scrollTo(0,document.body.scrollHeight);
+	var audio = new Audio();
+	audio.src = 'src/sound/new_in.wav';
+	return function () {
+		audio.play();
+	}();
 });
+
+function op_set() {
+	document.getElementById("set-i").classList.toggle("opn");
+}
 
 function emoji_alert() {
 	document.getElementById("emoji_b").classList.toggle("vis");
