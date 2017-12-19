@@ -2,8 +2,14 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="GOchat">
+	<meta name="theme-color" content="#3366CC">
 	<title>GOchat</title>
-	<meta name="viewport" content="width=device-width">
+
+	<link rel="apple-touch-icon-precomposed" href="src/img/chat-icon-empty.png">
+
 	<link rel="stylesheet" type="text/css" href="src/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -14,11 +20,19 @@
 		<h1 class="appname">GOchat</h1>
 		<h3>Ваше имя?</h3>
 		<input type="text" class="username" id="username" axlength="25" placeholder="Введите имя">
-		<input type="text" class="image" id="image" placeholder="Фото профиля">
+	</div>
+
+	<div class="header">
+		<div class="headname">GOchat</div>
+		<span id="status"></span>
+		<a href="javascript:%20x()" onclick="op_set();" class="cmd-m chk"><i class="material-icons">settings</i></a>
+		<div id="set-i" class="set-i chk">
+			<input type="text" class="image" id="image" placeholder="Фото профиля">
+		</div>
+		<input class="exit" type="button" title="Выход" value="exit_to_app" onclick="localStorage.removeItem('username');localStorage.removeItem('image');location.reload();">
 	</div>
 
 	<div class="wrapper"></div>
-	<div id="status"></div>
 
 	<img id="pastedImage">
 	<input class="message" type="text" id="emoji_c" maxlength="800" placeholder="Введите сообщение" value="">
@@ -29,6 +43,7 @@
 		<div id="es_togg" class="emoji_b-alert-body vis">
 			<div class="es-board emoji_b-alert-question">
 
+				<a href="javascript:%20x()" onclick="DoSmilie(&#39; [img][/img] &#39;);emoji_alert();" class="cmd-i"><i class="material-icons">image</i></a>
 				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a01 &#39;);"><img class="emoji_a" src="src/img/a01.png"></a>
 				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a02 &#39;);"><img class="emoji_a" src="src/img/a02.png"></a>
 				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a03 &#39;);"><img class="emoji_a" src="src/img/a03.png"></a>
@@ -57,7 +72,7 @@
 
 			</div>
 			<div class="emoji_b-alert-option-body">
-				<button tabindex="0" type="button" class="emoji_b-but">
+				<button type="button" class="emoji_b-but">
 					<div>
 						<a id="toggle" class="toggle emoji_b-but-opt" onclick="es_toggle()">
 							<i class="material-icons menu">arrow_forward</i>
