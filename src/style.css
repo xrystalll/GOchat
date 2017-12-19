@@ -203,10 +203,23 @@ border-color: #fff transparent transparent transparent;
 }
 
 .cover {
+	width: 42px;
+	height: 42px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	display: table-cell;
+	position: absolute;
+	left: -53px;
+	margin-top: -8px !important;
+	color: #fff;
+	line-height: 42px;
+	text-align: center;
+	font-size: 0 !important;
 	z-index: 1;
 }
 
-.cover, .cover_n {
+.cover_n {
 	width: 42px;
 	height: 42px;
 	background: #3366CC;
@@ -221,6 +234,7 @@ border-color: #fff transparent transparent transparent;
 	line-height: 42px;
 	text-align: center;
 	font-size: 0 !important;
+	z-index: 2;
 }
 
 .cover_n:first-letter {
