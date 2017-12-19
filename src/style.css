@@ -203,6 +203,10 @@ border-color: #fff transparent transparent transparent;
 }
 
 .cover {
+	z-index: 1;
+}
+
+.cover, .cover_n {
 	width: 42px;
 	height: 42px;
 	background: #3366CC;
@@ -219,7 +223,7 @@ border-color: #fff transparent transparent transparent;
 	font-size: 0 !important;
 }
 
-.cover:first-letter {
+.cover_n:first-letter {
 	font-size: 16px !important;
 	color: transparent;
 }
