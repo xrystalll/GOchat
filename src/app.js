@@ -5,7 +5,6 @@ var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
 var userimageInput = $('input.image');
-cosole.log('https://github.com/xrystalll');
 function checkTime(i) { if (i<10) { i="0" + i; } return i; }
 
 var image = [];
@@ -126,6 +125,7 @@ var submit = document.getElementById('send');
 submit.onclick = function () {
 	var curUsername = user.join();
 	var curUserimage = image.join();
+	console.log('https://github.com/xrystalll');
 	var tm = new Date();
 	var nowTime = checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
 	if (input.val().length > 0) {
