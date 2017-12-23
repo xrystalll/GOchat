@@ -5,6 +5,7 @@ var wrap = $('.wrapper');
 var input = $('input.message');
 var usernameInput = $('input.username');
 var userimageInput = $('input.image');
+cosole.log('https://github.com/xrystalll');
 function checkTime(i) { if (i<10) { i="0" + i; } return i; }
 
 var image = [];
