@@ -5,9 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="GOchat">
-	<meta name="theme-color" content="#3366CC">
+	<meta name="theme-color" content="#2A56C6">
 	<title>GOchat</title>
 
+	<link rel="manifest" href="manifest.json">
+	<link rel="shortcut icon" href="/design/img/favicon.ico">
 	<link rel="apple-touch-icon-precomposed" href="src/img/chat-icon-empty.png">
 
 	<link rel="stylesheet" type="text/css" href="src/style.css">
@@ -16,10 +18,16 @@
 <body>
 
 	<div class="initModal">
-		<img src="src/img/chat-icon-empty.png" alt="GOchat">
-		<h1 class="appname">GOchat</h1>
-		<h3>Ваше имя?</h3>
-		<input type="text" class="username" id="username" axlength="25" placeholder="Введите имя">
+	    <div id="step1" class="one_step">
+		    <img src="src/img/chat-icon-empty.png" alt="GOchat">
+		    <h1  class="appname">GOchat</h1>
+		    <input type="submit" class="login" onclick="login();" value="Войти">
+		</div>
+		<div id="step2" class="two_step">
+		    <h1  class="appname">GOchat</h1>
+		    <h3>Ваше имя?</h3>
+		    <input type="text" class="username" id="username" axlength="25" placeholder="Введите имя">
+		</div>
 	</div>
 
 	<div class="header">
@@ -32,43 +40,61 @@
 		<input class="exit" type="button" title="Выход" value="exit_to_app" onclick="localStorage.removeItem('username');localStorage.removeItem('image');location.reload();">
 	</div>
 
-	<div class="wrapper"></div>
+	<div id="wrap" class="wrapper">
+	</div>
 
 	<img id="pastedImage">
 	<input class="message" type="text" id="emoji_c" maxlength="800" placeholder="Введите сообщение" value="">
 	<input class="emoji_b" type="submit" onclick="emoji_alert()" value="mood">
 	<input class="send" type="submit" id="send" value="send">
+	
+	<div id="gif_box" class="gif-search-box">
+		<form id="gif-search-form">
+			<input type="text" id="gif-search-input" placeholder="Поиск gif">
+			<a class="emoji_b" onclick="gif_box()"><i class="material-icons gif-btn">gif</i></a>
+			<input class="send" type="submit" id="search-btn" value="search">
+		</form>
+		<div class="error-container"></div>
+		<div class="pic-container"></div>
+	</div>
 
 	<div id="emoji_b" class="emoji_b-alert">
 		<div id="es_togg" class="emoji_b-alert-body vis">
 			<div class="es-board emoji_b-alert-question">
 
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; [img][/img] &#39;);emoji_alert();" class="cmd-i"><i class="material-icons">image</i></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a01 &#39;);"><img class="emoji_a" src="src/img/a01.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a02 &#39;);"><img class="emoji_a" src="src/img/a02.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a03 &#39;);"><img class="emoji_a" src="src/img/a03.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a04 &#39;);"><img class="emoji_a" src="src/img/a04.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a05 &#39;);"><img class="emoji_a" src="src/img/a05.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a06 &#39;);"><img class="emoji_a" src="src/img/a06.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a07 &#39;);"><img class="emoji_a" src="src/img/a07.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a08 &#39;);"><img class="emoji_a" src="src/img/a08.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #a09 &#39;);"><img class="emoji_a" src="src/img/a09.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #b01 &#39;);"><img class="emoji_a" src="src/img/b01.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #b02 &#39;);"><img class="emoji_a" src="src/img/b02.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #b03 &#39;);"><img class="emoji_a" src="src/img/b03.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #b04 &#39;);"><img class="emoji_a" src="src/img/b04.png"></a>
+				<span onclick="gif_box();emoji_alert();" class="cmd-i"><i class="material-icons gif-btn">gif</i></span>
+				<span onclick="DoSmilie(&#39; [img][/img] &#39;);emoji_alert();" class="cmd-i"><i class="material-icons">image</i></span>
+				<span onclick="DoSmilie(&#39; #a01 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a01.png"></span>
+				<span onclick="DoSmilie(&#39; #a02 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a02.png"></span>
+				<span onclick="DoSmilie(&#39; #a03 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a03.png"></span>
+				<span onclick="DoSmilie(&#39; #a04 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a04.png"></span>
+				<span onclick="DoSmilie(&#39; #a05 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a05.png"></span>
+				<span onclick="DoSmilie(&#39; #a06 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a06.png"></span>
+				<span onclick="DoSmilie(&#39; #a07 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a07.png"></span>
+				<span onclick="DoSmilie(&#39; #a08 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a08.png"></span>
+				<span onclick="DoSmilie(&#39; #a09 &#39;);emoji_alert();"><img class="emoji_a" src="src/img/a09.png"></span>
+				<span onclick="DoSmilie(&#39; #b01 &#39;);"><img class="emoji_a" src="src/img/b01.png"></span>
+				<span onclick="DoSmilie(&#39; #b02 &#39;);"><img class="emoji_a" src="src/img/b02.png"></span>
+				<span onclick="DoSmilie(&#39; #b03 &#39;);"><img class="emoji_a" src="src/img/b03.png"></span>
+				<span onclick="DoSmilie(&#39; #b02 &#39;);"><img class="emoji_a" src="src/img/b02.png"></span>
+				<span onclick="DoSmilie(&#39; #b04 &#39;);"><img class="emoji_a" src="src/img/b04.png"></span>
 
 			</div>
 			
 			<div class="es-board sticker_b-alert-question">
 
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #z01 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z01.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #z02 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z02.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #z03 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z03.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #z04 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z04.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #z05 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z05.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #z06 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z06.png"></a>
-				<a href="javascript:%20x()" onclick="DoSmilie(&#39; #z07 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z07.png"></a>
+				<span onclick="DoSmilie(&#39; #z01 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z01.png"></span>
+				<span onclick="DoSmilie(&#39; #z02 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z02.png"></span>
+				<span onclick="DoSmilie(&#39; #z03 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z03.png"></span>
+				<span onclick="DoSmilie(&#39; #z04 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z04.png"></span>
+				<span onclick="DoSmilie(&#39; #z05 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z05.png"></span>
+				<span onclick="DoSmilie(&#39; #z06 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z06.png"></span>
+				<span onclick="DoSmilie(&#39; #z07 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/z07.png"></span>
+				
+				<span onclick="DoSmilie(&#39; #x01 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/x01.png"></span>
+				<span onclick="DoSmilie(&#39; #x02 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/x02.png"></span>
+				<span onclick="DoSmilie(&#39; #x03 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/x03.png"></span>
+				<span onclick="DoSmilie(&#39; #x04 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/x04.png"></span>
 
 			</div>
 			<div class="emoji_b-alert-option-body">
