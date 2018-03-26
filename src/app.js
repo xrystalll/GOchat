@@ -106,7 +106,7 @@ submit.onclick = function () {
 	var curUsername = user.join();
 	var curUserimage = image.join();
 	var tm = new Date();
-	var nowTime = checkTime(tm.getDate()) + '.' + checkTime(tm.getMonth()) + ' в ' + checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
+	var nowTime = checkTime(tm.getDate()) + '.' + checkTime(tm.getMonth()+1) + ' в ' + checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
 	if (input.val().length > 0) {
 		var getTxt = input.val();
 		messages.push({
@@ -123,7 +123,7 @@ input.on('keyup', function(e) {
 	var curUsername = user.join();
 	var curUserimage = image.join();
 	var tm = new Date();
-	var nowTime = checkTime(tm.getDate()) + '.' + checkTime(tm.getMonth()) + ' в ' + checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
+	var nowTime = checkTime(tm.getDate()) + '.' + checkTime(tm.getMonth()+1) + ' в ' + checkTime(tm.getHours()) + ':' + checkTime(tm.getMinutes());
 	if (e.keyCode === 13 && input.val().length > 0) {
 		var getTxt = input.val();
 		messages.push({
