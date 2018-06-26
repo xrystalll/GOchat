@@ -9,7 +9,6 @@
 	<title>GOchat</title>
 
 	<link rel="manifest" href="manifest.json">
-	<link rel="shortcut icon" href="/design/img/favicon.ico">
 	<link rel="apple-touch-icon-precomposed" href="src/img/chat-icon-empty.png">
 
 	<link rel="stylesheet" type="text/css" href="src/style.css">
@@ -18,15 +17,15 @@
 <body>
 
 	<div class="initModal">
-	    <div id="step1" class="one_step">
-		    <img src="src/img/chat-icon-empty.png" alt="GOchat">
-		    <h1  class="appname">GOchat</h1>
-		    <input type="submit" class="login" onclick="login();" value="Войти">
+		<div id="step1" class="one_step">
+			<img src="src/img/chat-icon-empty.png" alt="GOchat">
+			<h1  class="appname">GOchat</h1>
+			<input type="submit" class="login" onclick="login();" value="Войти">
 		</div>
 		<div id="step2" class="two_step">
-		    <h1  class="appname">GOchat</h1>
-		    <h3>Ваше имя?</h3>
-		    <input type="text" class="username" id="username" axlength="25" placeholder="Введите имя">
+			<h1  class="appname">GOchat</h1>
+			<h3>Ваше имя?</h3>
+			<input type="text" class="username" id="username" axlength="25" placeholder="Введите имя">
 		</div>
 	</div>
 
@@ -35,13 +34,12 @@
 		<span id="status"></span>
 		<a href="javascript:%20x()" onclick="op_set();" class="cmd-m chk"><i class="material-icons">settings</i></a>
 		<div id="set-i" class="set-i chk">
-			<input type="text" class="image" id="image" placeholder="Фото профиля">
+			<input type="text" class="image" id="image" placeholder="Введите ссылку на фото профиля">
 		</div>
 		<input class="exit" type="button" title="Выход" value="exit_to_app" onclick="localStorage.removeItem('username');localStorage.removeItem('image');location.reload();">
 	</div>
 
-	<div id="wrap" class="wrapper">
-	</div>
+	<div id="wrap" class="wrapper"></div>
 
 	<img id="pastedImage">
 	<input class="message" type="text" id="emoji_c" maxlength="800" placeholder="Введите сообщение" value="">
@@ -95,6 +93,8 @@
 				<span onclick="DoSmilie(&#39; #x02 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/x02.png"></span>
 				<span onclick="DoSmilie(&#39; #x03 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/x03.png"></span>
 				<span onclick="DoSmilie(&#39; #x04 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/x04.png"></span>
+				
+				<span onclick="DoSmilie(&#39; #y01 &#39;);es_toggle();emoji_alert();"><img class="sticker_a" src="src/img/y01.png"></span>
 
 			</div>
 			<div class="emoji_b-alert-option-body">
