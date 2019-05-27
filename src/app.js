@@ -169,9 +169,14 @@ $(document).ready(function() {
 	var s = new Audio;
 	wrap.on('click', '.control', function() {
 		$(this).addClass('playing');
-		s.src= $(this).data('src'),
-		s.play(),
-		$(this).find('i').text('pause')
+		if (s.played) {
+			s.src= $(this).data('src'),
+			s.play(),
+			$(this).find('i').text('pause')
+		} else {
+			s.pause(),
+			$(this).find('i').text('play_arrow')
+		}
 	});
 	s.onended = function() {
 		$('.playing').find('i').text('play_arrow'),
