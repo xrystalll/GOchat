@@ -294,6 +294,48 @@ a {
 	margin-top: 8px;
 }
 
+.audio {
+	display: flex;
+	flex: 1 1 200px;
+	align-items: center;
+}
+
+.audio div {
+	margin: 0 !important;
+}
+
+.audio-side {
+	padding-right: 16px;
+	flex: none;
+}
+
+.audio-btn {
+	position: relative;
+	background: #1565C0;
+	border-radius: 50px;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+}
+
+.audio-btn i {
+	position: absolute;
+	font-size: 28px;
+	color: #fff;
+	top: 7px;
+	left: 7px;
+}
+
+.audio-text {
+	line-height: 18px;
+	font-weight: 500;
+	margin: 12px 0 !important;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 150px;
+}
+
 img#pastedImage {
 	max-width: 172px;
 	max-height: 172px;
