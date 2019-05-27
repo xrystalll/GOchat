@@ -163,9 +163,6 @@ wrap.append('<div class="empty ic"><div class="empty_words">Сообщений �
 messages.limitToLast(69).on("child_added", function(i) {
 	wrap.append('<div class="msb"><div  onclick="DoSmilie(&#39;' + $.logcheck(i.val().user) + ', &#39;);" class="cover" style="background-image: url(' + $.logcheck(i.val().image) + ');"></div><div class="cover_n">' + $.logcheck(i.val().user) + '</div><span>' + $.logcheck(i.val().user) + '</span> <time>' + $.logcheck(i.val().time) + '</time><div>' + $.sanitize(i.val().message) + '</div></div>'),
 	window.scrollTo(0,document.body.scrollHeight);
-	var m = new Audio;
-	return m.src="src/sound/new_in.wav",
-	m.play()
 });
 
 $(document).ready(function() {
