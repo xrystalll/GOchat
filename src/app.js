@@ -165,9 +165,9 @@ messages.limitToLast(69).on("child_added", function(i) {
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
-$(window).on('load', function() {
+$(document).on('load', function() {
 	var s = new Audio;
-	$(document).on('click', '.control', function() {
+	$('.control').on('click', function() {
 		$(this).addClass('playing');
 		s.src= $(this).data('src'),
 		s.play(),
