@@ -165,7 +165,7 @@ messages.limitToLast(69).on("child_added", function(i) {
 	window.scrollTo(0,document.body.scrollHeight);
 	var m = new Audio;
 	return m.src="src/sound/new_in.wav",
-	void m.play()
+	m.play()
 });
 
 $(document).ready(function() {
