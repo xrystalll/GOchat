@@ -17,6 +17,7 @@ function checkTime(e) { return e < 10 && (e="0"+e), e }
 		replace(/<style[^>]*?>.*?<\/style>/gi, '#^$!$&1').
 		replace(/\[img\](.*?)\[\/img\]/gi, '<img class="pic" src="$1">').
 		replace(/\[a\](.*?)\[\/a\]/gi, '<a href="$1">$1</a>').
+		replace(/\[audio\](.*?)\[\/audio\]/gi, '<div class="audio"><div class="audio-side"><div class="audio-btn"><div class="control" data-src="$1"><i class="material-icons">play_arrow</i></div></div></div><div class="audio-text">$1</div></div>').
 		replace(/#a01/gi, '<img class="emoji" src="src/img/a01.png">').
 		replace(/#a02/gi, '<img class="emoji" src="src/img/a02.png">').
 		replace(/#a03/gi, '<img class="emoji" src="src/img/a03.png">').
@@ -70,7 +71,7 @@ $(document).ready(function() {
 		$("img#pastedImage").removeAttr("src")
 	})
 }),
-document.getElementById("pastedImage").onclick=function(e) {
+document.getElementById("pastedImage").onclick = function(e) {
 	document.getElementById("emoji_c").value=""
 };
 
@@ -80,7 +81,7 @@ for(i = 0; i < elements.length; i++)!function(e) {
 	var t = e.getAttribute("id");
 	if(e.value = localStorage.getItem(t), e.oninput = function() {
 		localStorage.setItem(t,e.value), checkValidity()
-	}, e.value.length > 1){
+	}, e.value.length > 1) {
 		var l = localStorage.getItem(t);
 		user.push(l), $(".initModal").css("display","none"),
 		localStorage.setItem('msb', 'my'),
@@ -101,7 +102,7 @@ for(i = 0; i < elements.length; i++)!function(e) {
 	var t = e.getAttribute("id");
 	if(e.value = localStorage.getItem(t), e.oninput = function() {
 		localStorage.setItem(t,e.value), checkValidity()
-	}, e.value.length > 1){
+	}, e.value.length > 1) {
 		var l = localStorage.getItem(t);
 		image.push(l), $(".chk").css("display","none")
 	}
@@ -162,9 +163,23 @@ wrap.append('<div class="empty ic"><div class="empty_words">Сообщений �
 messages.limitToLast(69).on("child_added", function(i) {
 	wrap.append('<div class="msb"><div  onclick="DoSmilie(&#39;' + $.logcheck(i.val().user) + ', &#39;);" class="cover" style="background-image: url(' + $.logcheck(i.val().image) + ');"></div><div class="cover_n">' + $.logcheck(i.val().user) + '</div><span>' + $.logcheck(i.val().user) + '</span> <time>' + $.logcheck(i.val().time) + '</time><div>' + $.sanitize(i.val().message) + '</div></div>'),
 	window.scrollTo(0,document.body.scrollHeight);
+	var m = new Audio;
+	return m.src="src/sound/new_in.wav",
+	void m.play()
+});
+
+$(document).ready(function() {
 	var s = new Audio;
-	return s.src="src/sound/new_in.wav",
-	void s.play()
+	$('.control').on('click', function() {
+		$(this).addClass('playing');
+		s.src= $(this).data('src'),
+		s.play(),
+		$(this).find('i').text('pause')
+	});
+	s.onended = function() {
+		$('.playing').find('i').text('play_arrow'),
+		$('.control').removeClass('playing');
+	}
 });
 
 function op_set() {
