@@ -165,17 +165,19 @@ messages.limitToLast(69).on("child_added", function(i) {
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
-var s = new Audio;
-$('.control').on('click', function() {
-	$(this).addClass('playing');
-	s.src= $(this).data('src'),
-	s.play(),
-	$(this).find('i').text('pause')
+$(window).on('load', function() {
+	var s = new Audio;
+	$('.control').on('click', function() {
+		$(this).addClass('playing');
+		s.src= $(this).data('src'),
+		s.play(),
+		$(this).find('i').text('pause')
+	});
+	s.onended = function() {
+		$('.playing').find('i').text('play_arrow'),
+		$('.control').removeClass('playing');
+	}
 });
-s.onended = function() {
-	$('.playing').find('i').text('play_arrow'),
-	$('.control').removeClass('playing');
-};
 
 function op_set() {
 	document.getElementById("set-i").classList.toggle("opn")
